@@ -53,12 +53,36 @@
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink
-                    to="/developers"
-                    class="text-white block border-t border-gray-600 px-6 py-5"
-                  >
-                    Developers
-                  </NuxtLink>
+                  <Disclosure as="div" v-slot="{ open }">
+                    <DisclosureButton
+                      class="text-white border-t border-gray-600 px-6 py-5 w-full flex justify-between items-center"
+                    >
+                      <span>Developers</span>
+                      <ChevronDownIcon
+                        :class="[
+                          open ? 'rotate-180 transform' : '',
+                          'h-4 w-4 stroke-2',
+                        ]"
+                        aria-hidden="true"
+                      />
+                    </DisclosureButton>
+                    <DisclosurePanel as="div" class="px-10 pb-8 text-sm">
+                      <NuxtLink
+                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
+                        to="/developers"
+                      >
+                        Get Started
+                        <ArrowRightIcon class="w-4 h-4 ml-2" />
+                      </NuxtLink>
+                      <NuxtLink
+                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
+                        to="/developers/university"
+                      >
+                        University
+                        <ArrowRightIcon class="w-4 h-4 ml-2" />
+                      </NuxtLink>
+                    </DisclosurePanel>
+                  </Disclosure>
                 </li>
                 <li>
                   <Disclosure as="div" v-slot="{ open }">
