@@ -9,7 +9,12 @@
           Join the first group of builders and quickly find new opportunities in
           blockchain with Astar University.
         </p>
-        <Button variant="outlined" size="xl">
+        <Button
+          href="https://astar.getlearnworlds.com/?msg=signup"
+          target="_blank"
+          variant="outlined"
+          size="xl"
+        >
           Join the University
           <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
         </Button>

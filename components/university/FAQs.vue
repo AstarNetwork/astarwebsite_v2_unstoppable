@@ -25,8 +25,11 @@
             </span>
           </DisclosureButton>
         </dt>
-        <DisclosurePanel as="dd" class="mt-2 pr-12">
-          <p class="text-lg text-gray-300">{{ faq.answer }}</p>
+        <DisclosurePanel as="dd" class="mt-6 pr-12 university-faqs__answer">
+          <p
+            v-html="faq.answer"
+            class="text-lg text-gray-300 whitespace-pre-wrap"
+          />
         </DisclosurePanel>
       </Disclosure>
     </dl>
@@ -46,12 +49,12 @@ const faqs = [
   {
     question: "What is the goal of Astar University?",
     answer:
-      "By educating developers through hands-on training, we open the path for software programmers to quickly become web3 developers. We’ll teach you how to build your own decentralized project and enter the high-growth field of blockchain development.",
+      "By educating developers through hands-on training, we open the path for software programmers to quickly become web3 developers. We'll teach you how to build your own decentralized project and enter the high-growth field of blockchain development.",
   },
   {
     question: "How do I start?",
     answer:
-      "Start your career in web3 by completing this application form. \n\nIf you are an experienced developer, visit our Developer Page to start building or running a node.",
+      "Start your career in web3 by completing this <a href='https://astar.getlearnworlds.com/?msg=signup' target='_blank'>application form</a>. \n\nIf you are an experienced developer, visit our <a href='/developers'>Developer Page</a> to start building or running a node.",
   },
   {
     question: "Who can apply?",
@@ -76,7 +79,13 @@ const faqs = [
   {
     question: "Where does it take place?",
     answer:
-      "This course is online only. You will complete challenging modules at your own pace and always have access to coaching through a private Live FAQ. At the end of the course we’ll have a private graduation ceremony to celebrate your achievement and meet the Astar team.",
+      "This course is online only. You will complete challenging modules at your own pace and always have access to coaching through a private Live FAQ. At the end of the course we'll have a private graduation ceremony to celebrate your achievement and meet the Astar team.",
   },
 ];
 </script>
+
+<style lang="postcss">
+.university-faqs__answer a {
+  @apply text-space-cyan hover:underline hover:text-space-cyan-lighter;
+}
+</style>

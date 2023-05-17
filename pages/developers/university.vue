@@ -24,7 +24,12 @@
                 Hands-on training to put you on the fast track to a web3 career.
                 Solidity. Rust. And Polkadot.
               </p>
-              <Button variant="outlined" size="xl">
+              <Button
+                href="https://astar.getlearnworlds.com/?msg=signup"
+                target="_blank"
+                variant="outlined"
+                size="xl"
+              >
                 Join the University
                 <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
               </Button>
