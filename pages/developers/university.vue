@@ -9,29 +9,53 @@
           width="1728"
           height="1728"
         />
-        <div
-          class="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-start"
-        >
+        <div class="pt-44 flex items-center justify-start">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-            <div class="text-center">
+            <div class="text-center mb-24">
               <h1
                 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
               >
                 Astar University
               </h1>
-              <p class="sm:text-xl lg:text-2xl">
+              <p class="sm:text-xl lg:text-2xl mb-2">
                 Online training to gain web3 programming skills
               </p>
-              <p>
+              <p class="mb-16">
                 Hands-on training to put you on the fast track to a web3 career.
                 Solidity. Rust. And Polkadot.
               </p>
+              <Button variant="outlined" size="xl">
+                Join the University
+                <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+              </Button>
+            </div>
+
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 w-full">
+              <video controls preload="auto">
+                <source src="/videos/astar.mp4" type="video/mp4" />
+              </video>
+              <div class="text-center text-xl mt-12">
+                <p class="gradient-text font-semibold text-2xl">
+                  <span>Software Developers:</span>
+                </p>
+                <p class="text-xl">
+                  Start or advance your career by learning with industry
+                  leaders.<br />
+                  Build EVM contracts and work with cutting-edge web3
+                  technologies.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
-        University
+      <div class="relative z-10">
+        <UniversityOverview class="py-60" />
+        <UniversityCurriculum class="py-24" />
+        <DevelopersTestimonials class="py-24" title="Why learn about Astar?" />
+        <UniversityFAQs class="py-24" />
+        <UniversityCTA class="my-24" />
+        <UniversityNewsletter class="pb-24" />
       </div>
     </template>
     <template #earth>
@@ -42,10 +66,6 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-
-useHead({
-  script: [{ src: "//embed.typeform.com/next/embed.js" }],
-});
 
 const route = useRoute();
 import { meta } from "@/content/meta";

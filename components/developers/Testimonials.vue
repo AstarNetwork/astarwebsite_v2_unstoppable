@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
     <h2 class="title text-center mb-12">
-      <span>Testimonials</span>
+      <span>{{ title }}</span>
     </h2>
     <carousel :items-to-show="1.2">
       <slide v-for="item in testimonials" class="px-2 sm:px-8">
@@ -50,7 +50,7 @@ const testimonials = [
   {
     name: "Ben White",
     company: "Parity Technologies",
-    text: "Astar is a layer 1 blockchain built on Substrate. Through Polkadot’s shared security and XCMP, Astar's progress on WASM support can enable very unique use-cases to the Polkadot ecosystem.",
+    text: "Astar is a layer 1 blockchain built on Substrate. Through Polkadot's shared security and XCMP, Astar's progress on WASM support can enable very unique use-cases to the Polkadot ecosystem.",
     image: "ben-white.webp",
   },
   {
@@ -62,10 +62,17 @@ const testimonials = [
   {
     name: "Michael Garland",
     company: "Product Manager, Alchemy",
-    text: "It’s rare that we find teams and products as obssesed with improving Web3 developer experience as we are at Alchemy, but Astar is exactly that. Features like dApp Staking and XCMP are gamechangers for developers, which is why we’re so excited to be a part of the Astar ecosystem.",
+    text: "It's rare that we find teams and products as obssesed with improving Web3 developer experience as we are at Alchemy, but Astar is exactly that. Features like dApp Staking and XCMP are gamechangers for developers, which is why we're so excited to be a part of the Astar ecosystem.",
     image: "michael-garland.webp",
   },
 ];
+
+const props = defineProps({
+  title: {
+    type: String,
+    default: "Testimonials",
+  },
+});
 </script>
 
 <style lang="postcss">
