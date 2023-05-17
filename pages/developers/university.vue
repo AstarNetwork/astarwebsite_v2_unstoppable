@@ -10,15 +10,16 @@
           height="1728"
         />
         <div class="pt-44 flex items-center justify-start">
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-            <div class="text-center mb-24">
+          <div class="relative z-10 w-full">
+            <div class="text-center mb-12 sm:mb-24">
               <h1
-                class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
+                class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow leading-none mb-6"
               >
                 Astar University
               </h1>
-              <p class="sm:text-xl lg:text-2xl mb-2">
-                Online training to gain web3 programming skills
+              <p class="text-xl lg:text-2xl mb-2">
+                Online training to
+                <span class="font-bold">gain web3 programming skills</span>
               </p>
               <p class="mb-16">
                 Hands-on training to put you on the fast track to a web3 career.
@@ -35,15 +36,15 @@
               </Button>
             </div>
 
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 w-full">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 w-full">
               <video controls preload="auto">
                 <source src="/videos/astar.mp4" type="video/mp4" />
               </video>
-              <div class="text-center text-xl mt-12">
-                <p class="gradient-text font-semibold text-2xl">
+              <div class="text-center text-xl mt-6 sm:mt-12">
+                <p class="gradient-text font-semibold text-xl sm:text-2xl">
                   <span>Software Developers:</span>
                 </p>
-                <p class="text-xl">
+                <p class="text-lg sm:text-xl">
                   Start or advance your career by learning with industry
                   leaders.<br />
                   Build EVM contracts and work with cutting-edge web3

@@ -1,11 +1,15 @@
 <template>
   <div class="space-gradient before:hidden">
-    <div class="text-center py-36 bg-[url(/images/common/space-stars.svg)]">
+    <div
+      class="text-center py-24 sm:py-36 bg-[url(/images/common/space-stars.svg)]"
+    >
       <div class="px-4 sm:px-6">
-        <h2 class="max-w-5xl mx-auto text-5xl font-bold leading-tight mb-4">
-          Start your web3 career <br />through hands-on learning!
+        <h2
+          class="max-w-4xl mx-auto text-3xl sm:text-5xl font-bold leading-tight mb-4"
+        >
+          Start your web3 career through hands-on learning!
         </h2>
-        <p class="text-xl max-w-2xl mx-auto mb-12">
+        <p class="text-base sm:text-xl max-w-2xl mx-auto mb-12">
           Join the first group of builders and quickly find new opportunities in
           blockchain with Astar University.
         </p>

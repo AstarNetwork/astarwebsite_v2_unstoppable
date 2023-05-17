@@ -3,10 +3,10 @@
     <h2 class="title text-center mb-12">
       <span>Overview</span>
     </h2>
-    <ul class="grid grid-cols-3 gap-16">
+    <ul class="grid grid-cols-1 sm:grid-cols-3 gap-16">
       <li v-for="item in overview" class="text-center">
         <div class="w-36 h-36 bg-white/10 mx-auto mb-6">illustration</div>
-        <h3 class="text-3xl font-bold leading-tight mb-4">
+        <h3 class="text-2xl sm:text-3xl font-bold leading-tight mb-4">
           {{ item.title }}
         </h3>
         <p>{{ item.description }}</p>

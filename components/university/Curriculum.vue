@@ -10,11 +10,13 @@
         v-for="(item, index) in curriculum"
         class="flex before:content-[''] before:w-3 before:h-3 before:block before:rounded-full before:bg-space-pink before:shrink-0 before:mt-12"
       >
-        <div class="bg-space-gray rounded-2xl p-10 flex-1 ml-10">
+        <div class="bg-space-gray rounded-2xl p-8 sm:p-10 flex-1 ml-4 sm:ml-10">
           <p class="gradient-text font-medium text-lg">
             <span>Module {{ index }}</span>
           </p>
-          <h3 class="font-bold text-2xl mb-2">{{ item.title }}</h3>
+          <h3 class="font-bold text-xl sm:text-2xl mb-2 leading-tight">
+            {{ item.title }}
+          </h3>
           <p class="text-gray-300">{{ item.description }}</p>
         </div>
       </li>

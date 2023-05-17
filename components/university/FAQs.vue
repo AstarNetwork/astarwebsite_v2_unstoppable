@@ -4,7 +4,7 @@
       <span>FAQs</span>
     </h2>
     <dl
-      class="space-y-10 divide-y divide-white/20 border-t border-b border-white/20 pb-10"
+      class="space-y-6 sm:space-y-10 divide-y divide-white/20 border-t border-b border-white/20 pb-6 sm:pb-10"
     >
       <Disclosure
         as="div"
@@ -12,11 +12,11 @@
         :key="faq.question"
         v-slot="{ open }"
       >
-        <dt class="pt-10">
+        <dt class="pt-6 sm:pt-10">
           <DisclosureButton
             class="flex w-full items-start justify-between text-left text-white"
           >
-            <span class="text-xl font-medium">
+            <span class="text-base sm:text-xl font-medium">
               {{ faq.question }}
             </span>
             <span class="ml-6 flex h-7 items-center">
@@ -28,7 +28,7 @@
         <DisclosurePanel as="dd" class="mt-6 pr-12 university-faqs__answer">
           <p
             v-html="faq.answer"
-            class="text-lg text-gray-300 whitespace-pre-wrap"
+            class="text-base sm:text-lg text-gray-300 whitespace-pre-wrap"
           />
         </DisclosurePanel>
       </Disclosure>
