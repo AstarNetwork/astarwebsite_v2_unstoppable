@@ -9,7 +9,7 @@
           width="1728"
           height="1728"
         />
-        <div class="pt-44 flex items-center justify-start">
+        <div class="pt-44 sm:pt-60 flex items-center justify-start">
           <div class="relative z-10 w-full">
             <div class="text-center mb-12 sm:mb-24">
               <h1

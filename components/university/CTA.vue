@@ -5,7 +5,7 @@
     >
       <div class="px-4 sm:px-6">
         <h2
-          class="max-w-4xl mx-auto text-3xl sm:text-5xl font-bold leading-tight mb-4"
+          class="max-w-4xl mx-auto text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-4"
         >
           Start your web3 career through hands-on learning!
         </h2>
