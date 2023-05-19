@@ -61,7 +61,6 @@
         <DevelopersTestimonials class="py-24" title="Why learn about Astar?" />
         <UniversityFAQs class="py-24" />
         <UniversityCTA class="my-24" />
-        <UniversityNewsletter class="pb-24" />
       </div>
     </template>
     <template #earth>
