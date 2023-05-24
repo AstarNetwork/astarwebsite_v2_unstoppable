@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "Do I need to know Rust or Solidity programming?",
     answer:
-      "No. All that is required is experience with any programming language such as python, C++, javascript, or any other popular language. We love both Rust and Solidity programming. Throughout our course you'll gain the skills to begin building with both languages.",
+      "No. All that is required is experience with any programming language such as Python, C++, JavaScript, or any other popular language. We love both Rust and Solidity programming. Throughout our course you'll gain the skills to begin building with both languages.",
   },
   {
     question: "How long is the program?",
