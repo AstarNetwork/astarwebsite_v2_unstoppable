@@ -12,7 +12,7 @@
       >
         <div class="bg-space-gray rounded-2xl p-8 sm:p-10 flex-1 ml-4 sm:ml-10">
           <p class="gradient-text font-medium text-lg">
-            <span>Module {{ index }}</span>
+            <span>Module {{ index + 1 }}</span>
           </p>
           <h3 class="font-bold text-xl sm:text-2xl mb-2 leading-tight">
             {{ item.title }}
@@ -27,14 +27,9 @@
 <script setup lang="ts">
 const curriculum = [
   {
-    title: "Introduction to Astar Network",
-    description:
-      "A non-technical overview of Astar Network and its capabilities. Designed for business professionals and anyone new to Astar.",
-  },
-  {
     title: "Astar and Polkadot",
     description:
-      "Learn about the pillars of Astar Network by building projects on testnet and understand how blockchain supports developer activity. We will overview the complex relationship between Polkadot and Astar Network.",
+      "Learn about the pillars of Astar Network, its capabilities understand how blockchain supports developer activity. We will overview the complex relationship between Polkadot and Astar Network.",
   },
   {
     title: "WebAssembly and Wasm Smart Contracts",

@@ -14,7 +14,7 @@
           blockchain with Astar University.
         </p>
         <Button
-          href="https://astar.getlearnworlds.com/?msg=signup"
+          href="https://docs.google.com/forms/d/1702E8rt-_QdjgUVArLpUwMvq-cPheBw4VJvMRghaVsc/edit"
           target="_blank"
           variant="outlined"
           size="xl"

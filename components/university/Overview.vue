@@ -23,8 +23,7 @@ const overview = [
   },
   {
     title: "Self-Paced Study",
-    description:
-      "Complete your course with flexible study. # hrs per week for 9 weeks.",
+    description: "Complete your course with flexible study, over for 9 weeks.",
   },
   {
     title: "Learn to Build",
