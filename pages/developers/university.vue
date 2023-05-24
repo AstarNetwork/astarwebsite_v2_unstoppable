@@ -54,7 +54,7 @@
                 <p class="text-lg sm:text-xl">
                   Start or advance your career by learning with industry
                   leaders.<br />
-                  Build EVM contracts and work with cutting-edge web3
+                  Build smart contracts and work with cutting-edge web3
                   technologies.
                 </p>
               </div>

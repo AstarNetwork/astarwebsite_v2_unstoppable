@@ -75,7 +75,7 @@ const faqs = [
   {
     question: "How long is the program?",
     answer:
-      "The program runs 9 weeks, beginning June 18, with an introductory course for anyone. Modules are flexible and self-paced. Deadline to apply is June 11.",
+      "The program runs 9 weeks, beginning June 18. Modules are flexible and self-paced. Deadline to apply is June 11.",
   },
   {
     question: "How much does it cost?",
