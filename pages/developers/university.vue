@@ -11,19 +11,18 @@
         />
         <div class="pt-44 sm:pt-60 flex items-center justify-start">
           <div class="relative z-10 w-full">
-            <div class="text-center mb-12 sm:mb-24">
+            <div class="text-center mb-12 sm:mb-24 px-4 sm:px-6">
               <h1
                 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow leading-none mb-6"
               >
                 Astar University
               </h1>
-              <p class="text-xl lg:text-2xl mb-2">
-                Online training to
-                <span class="font-bold">gain web3 programming skills</span>
+              <p class="text-xl lg:text-3xl mb-2">
+                Gain Web3 Programming Skills
               </p>
               <p class="mb-16">
                 Hands-on training to put you on the fast track to a web3 career.
-                Rust. Solidity. And Polkadot.
+                <br />Rust. Solidity. And Polkadot.
               </p>
               <Button
                 href="https://docs.google.com/forms/d/1702E8rt-_QdjgUVArLpUwMvq-cPheBw4VJvMRghaVsc/edit"

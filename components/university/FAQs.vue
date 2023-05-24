@@ -49,7 +49,7 @@ const faqs = [
   {
     question: "What is the goal of Astar University?",
     answer:
-      "By educating developers through hands-on training, we open the path for software programmers to quickly become web3 developers. You'll learn how to build your own decentralized project and get ready to the high-growth field of blockchain development.",
+      "By educating developers through hands-on training, we open the path for software programmers to quickly become web3 developers. You'll learn how to build your own decentralized project and get ready for the high-growth field of blockchain development.",
   },
   {
     question: "How do I start?",
@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "Do I need to know Rust or Solidity programming?",
     answer:
-      "No. All that is required is experience with any programming language such as Python, C++, JavaScript, or any other popular language. We love both Rust and Solidity programming. Throughout our course you'll gain the skills to begin building with both languages.",
+      "No. All that is required is experience with any programming language, such as Python, C++, JavaScript, or any other popular language. We love both Rust and Solidity programming. Throughout our course you'll gain the skills to begin building with both languages.",
   },
   {
     question: "How long is the program?",
