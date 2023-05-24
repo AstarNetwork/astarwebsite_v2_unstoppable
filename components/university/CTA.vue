@@ -14,7 +14,7 @@
           blockchain with Astar University.
         </p>
         <Button
-          href="https://docs.google.com/forms/d/1702E8rt-_QdjgUVArLpUwMvq-cPheBw4VJvMRghaVsc/edit"
+          :href="application"
           target="_blank"
           variant="outlined"
           size="xl"
@@ -29,4 +29,11 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+
+const props = defineProps({
+  application: {
+    type: String,
+    default: "",
+  },
+});
 </script>

@@ -40,6 +40,13 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
 import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
 
+const props = defineProps({
+  application: {
+    type: String,
+    default: "",
+  },
+});
+
 const faqs = [
   {
     question: "What is Astar Network?",
@@ -53,8 +60,7 @@ const faqs = [
   },
   {
     question: "How do I start?",
-    answer:
-      "Start your career in web3 by completing this <a href='https://docs.google.com/forms/d/1702E8rt-_QdjgUVArLpUwMvq-cPheBw4VJvMRghaVsc/edit' target='_blank'>application form</a>.",
+    answer: `Start your career in web3 by completing this <a href="${props.application}" target='_blank'>application form</a>.`,
   },
   {
     question: "Who can apply?",

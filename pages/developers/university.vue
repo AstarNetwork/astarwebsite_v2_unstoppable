@@ -25,7 +25,7 @@
                 <br />Rust. Solidity. And Polkadot.
               </p>
               <Button
-                href="https://docs.google.com/forms/d/1702E8rt-_QdjgUVArLpUwMvq-cPheBw4VJvMRghaVsc/edit"
+                :href="application"
                 target="_blank"
                 variant="outlined"
                 size="xl"
@@ -66,8 +66,8 @@
         <UniversityOverview class="py-60" />
         <UniversityCurriculum class="py-24" />
         <DevelopersTestimonials class="py-24" title="Why learn about Astar?" />
-        <UniversityFAQs class="py-24" />
-        <UniversityCTA class="my-24" />
+        <UniversityFAQs class="py-24" :application="application" />
+        <UniversityCTA class="my-24" :application="application" />
       </div>
     </template>
     <template #earth>
@@ -78,6 +78,8 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+
+const application = "https://forms.gle/4fnF1fWS3GRdDxtL6";
 
 const route = useRoute();
 import { meta } from "@/content/meta";
