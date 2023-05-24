@@ -23,10 +23,10 @@
               </p>
               <p class="mb-16">
                 Hands-on training to put you on the fast track to a web3 career.
-                Solidity. Rust. And Polkadot.
+                Rust. Solidity. And Polkadot.
               </p>
               <Button
-                href="https://astar.getlearnworlds.com/?msg=signup"
+                href="https://docs.google.com/forms/d/1702E8rt-_QdjgUVArLpUwMvq-cPheBw4VJvMRghaVsc/edit"
                 target="_blank"
                 variant="outlined"
                 size="xl"
@@ -37,8 +37,16 @@
             </div>
 
             <div class="max-w-5xl mx-auto px-4 sm:px-6 w-full">
-              <video controls preload="auto">
-                <source src="/videos/astar.mp4" type="video/mp4" />
+              <video
+                controls
+                preload="auto"
+                poster="/videos/astar_uni_teaser_v2.webp"
+                class="w-full"
+              >
+                <source
+                  src="/videos/astar_uni_teaser_v2.mp4"
+                  type="video/mp4"
+                />
               </video>
               <div class="text-center text-xl mt-6 sm:mt-12">
                 <p class="gradient-text font-semibold text-xl sm:text-2xl">
