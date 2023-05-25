@@ -18,7 +18,8 @@
                 Astar University
               </h1>
               <p class="text-xl lg:text-3xl mb-2">
-                Gain Web3 Programming Skills
+                Gain valuable
+                <span class="font-bold">web3 programming skills.</span>
               </p>
               <p class="mb-16">
                 Hands-on training to put you on the fast track to a web3 career.
@@ -49,13 +50,12 @@
               </video>
               <div class="text-center text-xl mt-6 sm:mt-12">
                 <p class="gradient-text font-semibold text-xl sm:text-2xl">
-                  <span>Software Developers:</span>
+                  <span>From zero to your first dApp:</span>
                 </p>
                 <p class="text-lg sm:text-xl">
-                  Start or advance your career by learning with industry
-                  leaders.<br />
-                  Build smart contracts and work with cutting-edge web3
-                  technologies.
+                  Start your career and learn to code web3 with industry
+                  leaders. Build smart contracts and work with cutting-edge
+                  blockchain technologies.
                 </p>
               </div>
             </div>

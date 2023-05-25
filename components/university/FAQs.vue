@@ -65,7 +65,7 @@ const faqs = [
   {
     question: "Who can apply?",
     answer:
-      "Software developers who have some experience programming in any language. There will be a small test with basic software programming questions, ideally add a time frame like 10 minutes or less.",
+      "Software developers who have some experience programming in any language. When you fill out the application form we will assess your experience and stay in contact.",
   },
   {
     question: "Do I need to know Rust or Solidity programming?",
