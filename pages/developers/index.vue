@@ -34,7 +34,10 @@
       <DevelopersAdvantages class="pb-12" />
       <DevelopersMultichain class="pb-28 sm:pb-44" />
       <DevelopersToolkit class="pb-32 sm:pb-64" />
-      <DevelopersTestimonials class="pb-28" />
+      <DevelopersTestimonials
+        class="pb-28"
+        :title="$t('developers.testimonials.title')"
+      />
     </template>
     <template #earth>
       <Footer />
@@ -46,10 +49,12 @@
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
 const route = useRoute();
+const { t } = useI18n();
 import { meta } from "@/content/meta";
-const seoTitle = `Developers | ${meta.siteName} - ${meta.tagline}`;
-const seoDescription =
-  "Build Ethereum and native dApps on Astar and be the part of multichain innovation.";
+const seoTitle = `${t("developers.title")} | ${meta.siteName} - ${t(
+  "meta.tagline"
+)}`;
+const seoDescription = t("developers.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}developers.png`;
 
