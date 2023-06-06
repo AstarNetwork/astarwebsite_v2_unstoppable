@@ -33,7 +33,9 @@
 
           <div class="hidden lg:flex lg:items-center">
             <nav class="flex items-center space-x-4 xl:space-x-8">
-              <NuxtLink to="/starmap" class="nav-item">2023 Starmap</NuxtLink>
+              <NuxtLink :to="localePath('/starmap')" class="nav-item">
+                2023 Starmap
+              </NuxtLink>
 
               <Popover v-slot="{ open }" class="relative">
                 <PopoverButton
@@ -68,14 +70,14 @@
                   >
                     <NuxtLink
                       class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                      to="/developers"
+                      :to="localePath('/developers')"
                     >
                       Get Started
                       <ArrowRightIcon class="inline-block w-5 h-5" />
                     </NuxtLink>
                     <NuxtLink
                       class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                      to="/developers/university"
+                      :to="localePath('/developers/university')"
                     >
                       University
                       <ArrowRightIcon class="inline-block w-5 h-5" />

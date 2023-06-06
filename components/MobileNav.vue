@@ -69,14 +69,14 @@
                     <DisclosurePanel as="div" class="px-10 pb-8 text-sm">
                       <NuxtLink
                         class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        to="/developers"
+                        :to="localePath('/developers')"
                       >
                         Get Started
                         <ArrowRightIcon class="w-4 h-4 ml-2" />
                       </NuxtLink>
                       <NuxtLink
                         class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        to="/developers/university"
+                        :to="localePath('/developers/university')"
                       >
                         University
                         <ArrowRightIcon class="w-4 h-4 ml-2" />
