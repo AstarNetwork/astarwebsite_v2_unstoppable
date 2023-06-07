@@ -49,11 +49,15 @@
       },
       "start": {
         "q": "How do I start?",
-        "a": "Start your career in web3 by completing this application form."
+        "a1": "Start your career in web3 by completing this ",
+        "a2": "application form",
+        "a3": "."
       },
       "apply": {
         "q": "Who can apply?",
-        "a": "Software developers who have some experience programming in any language. When you fill out the application form we will assess your experience and stay in contact."
+        "a1": "Software developers who have some experience programming in any language. When you fill out the ",
+        "a2": "application form",
+        "a3": " we will assess your experience and stay in contact."
       },
       "programming": {
         "q": "Do I need to know Rust or Solidity programming?",

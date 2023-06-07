@@ -60,11 +60,19 @@ const faqs = [
   },
   {
     question: t("university.faq.start.q"),
-    answer: t("university.faq.start.a"),
+    answer: `${t("university.faq.start.a1")}<a href="${
+      props.application
+    }" target="_blank">${t("university.faq.start.a2")}</a>${t(
+      "university.faq.start.a3"
+    )}`,
   },
   {
     question: t("university.faq.apply.q"),
-    answer: t("university.faq.apply.a"),
+    answer: `${t("university.faq.apply.a1")}<a href="${
+      props.application
+    }" target="_blank">${t("university.faq.apply.a2")}</a>${t(
+      "university.faq.apply.a3"
+    )}`,
   },
   {
     question: t("university.faq.programming.q"),
