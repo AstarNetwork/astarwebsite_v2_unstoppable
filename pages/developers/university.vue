@@ -31,7 +31,7 @@
                 variant="outlined"
                 size="xl"
               >
-                Join the University
+                {{ $t("university.join") }}
                 <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
               </Button>
             </div>
@@ -50,12 +50,10 @@
               </video>
               <div class="text-center text-xl mt-6 sm:mt-12">
                 <p class="gradient-text font-semibold text-xl sm:text-2xl">
-                  <span>From zero to your first dApp:</span>
+                  <span>{{ $t("university.intro.title") }}</span>
                 </p>
                 <p class="text-lg sm:text-xl">
-                  Start your career and learn to code web3 with industry
-                  leaders. Build smart contracts and work with cutting-edge
-                  blockchain technologies.
+                  {{ $t("university.intro.description") }}
                 </p>
               </div>
             </div>
@@ -65,7 +63,10 @@
       <div class="relative z-10">
         <UniversityOverview class="py-60" />
         <UniversityCurriculum class="py-24" />
-        <DevelopersTestimonials class="py-24" title="Why learn about Astar?" />
+        <DevelopersTestimonials
+          class="py-24"
+          :title="$t('university.reason')"
+        />
         <UniversityFAQs class="py-24" :application="application" />
         <UniversityCTA class="my-24" :application="application" />
       </div>
@@ -84,7 +85,8 @@ const application = "https://forms.gle/4fnF1fWS3GRdDxtL6";
 const route = useRoute();
 import { meta } from "@/content/meta";
 const seoTitle = `Astar University | ${meta.siteName} - ${meta.tagline}`;
-const seoDescription = "Online training to gain web3 programming skills";
+const seoDescription =
+  "Gain valuable web3 programming skills. Hands-on training to put you on the fast track to a web3 career. Rust. Solidity. And Polkadot.";
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}university.png`;
 

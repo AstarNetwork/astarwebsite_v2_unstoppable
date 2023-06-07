@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-7xl mx-auto px-4 sm:px-6">
     <h2 class="title text-center mb-12">
-      <span>Overview</span>
+      <span>{{ $t("university.overview.title") }}</span>
     </h2>
     <ul class="grid grid-cols-1 sm:grid-cols-3 gap-12 lg:gap-16">
       <li v-for="item in overview" class="text-center">
@@ -16,21 +16,22 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const overview = [
   {
-    title: "Learn to Build",
-    description:
-      "Boost your skills with amazing mentors and interactive modules.",
+    title: t("university.overview.build.title"),
+    description: t("university.overview.build.description"),
     image: "/images/university/overview-build.svg",
   },
   {
-    title: "Self-Paced Study",
-    description: "Complete your course with flexible study, over for 9 weeks.",
+    title: t("university.overview.self_paced.title"),
+    description: t("university.overview.self_paced.description"),
     image: "/images/university/overview-self-paced.svg",
   },
   {
-    title: "Unlock Your Potential",
-    description: "We'll celebrate your blockchain mastery on Graduation Day!",
+    title: t("university.overview.potential.title"),
+    description: t("university.overview.potential.description"),
     image: "/images/university/overview-graduation.svg",
   },
 ];

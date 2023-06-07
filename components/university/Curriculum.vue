@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-5xl mx-auto px-4 sm:px-6">
     <h2 class="title text-center mb-12">
-      <span>Curriculum Overview</span>
+      <span>{{ $t("university.curriculum.title") }}</span>
     </h2>
     <ol
       class="space-y-6 relative before:content-[''] before:w-[1px] before:bg-white/20 before:h-full before:block before:left-1.5 before:absolute before:-z-10"
@@ -12,7 +12,9 @@
       >
         <div class="bg-space-gray rounded-2xl p-8 sm:p-10 flex-1 ml-4 sm:ml-10">
           <p class="gradient-text font-medium text-lg">
-            <span>Module {{ index + 1 }}</span>
+            <span
+              >{{ $t("university.curriculum.module") }} {{ index + 1 }}</span
+            >
           </p>
           <h3 class="font-bold text-xl sm:text-2xl mb-2 leading-tight">
             {{ item.title }}
@@ -25,21 +27,20 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const curriculum = [
   {
-    title: "Astar and Polkadot",
-    description:
-      "Learn about the pillars of Astar Network, its capabilities understand how blockchain supports developer activity. We will overview the complex relationship between Polkadot and Astar Network.",
+    title: t("university.curriculum.module1.title"),
+    description: t("university.curriculum.module1.description"),
   },
   {
-    title: "WebAssembly and Wasm Smart Contracts",
-    description:
-      "Discover why WebAssembly (Wasm) has changed how developers build a blockchain. Understand how to build a contract with Solidity and Rust programming for Wasm format. You’ll learn through coding assignments and hands-on projects.",
+    title: t("university.curriculum.module2.title"),
+    description: t("university.curriculum.module2.description"),
   },
   {
-    title: "Interoperability and Infrastructure",
-    description:
-      "Astar projects and smart contracts communicate by exchanging messages across networks and environments. Learn how Astar securely communicates with XCM and enables multilingual smart contracts through XVM messaging. You’ll build a smart contract from scratch.",
+    title: t("university.curriculum.module3.title"),
+    description: t("university.curriculum.module3.description"),
   },
 ];
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-4xl mx-auto px-4 sm:px-6">
     <h2 class="title text-center mb-12">
-      <span>FAQs</span>
+      <span>{{ $t("university.faq.title") }}</span>
     </h2>
     <dl
       class="space-y-6 sm:space-y-10 divide-y divide-white/20 border-t border-b border-white/20 pb-6 sm:pb-10"
@@ -47,44 +47,40 @@ const props = defineProps({
   },
 });
 
+const { t } = useI18n();
+
 const faqs = [
   {
-    question: "What is Astar Network?",
-    answer:
-      "Astar is Japan's most popular smart contract platform supporting both EVM and WebAssembly (Wasm) environments, and interoperability between them using a Cross-Virtual Machine. Our innovative Build2Earn program allows developers to earn incentives for building decentralized apps.",
+    question: t("university.faq.astar.q"),
+    answer: t("university.faq.astar.a"),
   },
   {
-    question: "What is the goal of Astar University?",
-    answer:
-      "By educating developers through hands-on training, we open the path for software programmers to quickly become web3 developers. You'll learn how to build your own decentralized project and get ready for the high-growth field of blockchain development.",
+    question: t("university.faq.goal.q"),
+    answer: t("university.faq.goal.a"),
   },
   {
-    question: "How do I start?",
-    answer: `Start your career in web3 by completing this <a href="${props.application}" target='_blank'>application form</a>.`,
+    question: t("university.faq.start.q"),
+    answer: t("university.faq.start.a"),
   },
   {
-    question: "Who can apply?",
-    answer:
-      "Software developers who have some experience programming in any language. When you fill out the application form we will assess your experience and stay in contact.",
+    question: t("university.faq.apply.q"),
+    answer: t("university.faq.apply.a"),
   },
   {
-    question: "Do I need to know Rust or Solidity programming?",
-    answer:
-      "No. All that is required is experience with any programming language, such as Python, C++, JavaScript, or any other popular language. We love both Rust and Solidity programming. Throughout our course you'll gain the skills to begin building with both languages.",
+    question: t("university.faq.programming.q"),
+    answer: t("university.faq.programming.a"),
   },
   {
-    question: "How long is the program?",
-    answer:
-      "The program runs 9 weeks, beginning June 18. Modules are flexible and self-paced. Deadline to apply is June 11.",
+    question: t("university.faq.length.q"),
+    answer: t("university.faq.length.a"),
   },
   {
-    question: "How much does it cost?",
-    answer: "Our courses are totally free.",
+    question: t("university.faq.cost.q"),
+    answer: t("university.faq.cost.a"),
   },
   {
-    question: "Where does it take place?",
-    answer:
-      "This course is online only. You will complete challenging modules at your own pace and always have access to coaching with our developer team. At the end of the course we'll have a private graduation ceremony to celebrate your achievement and meet the Astar team.",
+    question: t("university.faq.place.q"),
+    answer: t("university.faq.place.a"),
   },
 ];
 </script>
