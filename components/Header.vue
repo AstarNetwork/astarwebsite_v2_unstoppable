@@ -28,7 +28,7 @@
           </NuxtLink>
 
           <div class="-my-2 -mr-2 lg:hidden">
-            <MobileNav :network="network" />
+            <MobileNav :network="network" :menus="menus" />
           </div>
 
           <div class="hidden lg:flex lg:items-center">
@@ -81,9 +81,9 @@
                           : 'w-72'
                       }`"
                     >
-                      <div v-for="(item, index) in category.nav">
+                      <div v-for="item in category.nav">
                         <p
-                          v-if="index !== 0 || item.label === 'Explorer'"
+                          v-if="item.label !== ''"
                           :class="`text-xs uppercase text-gray-400 mb-1 ${
                             category.label !== 'Network' && 'mt-8'
                           }`"
@@ -92,7 +92,7 @@
                         </p>
                         <NuxtLink
                           v-for="menu in item.nav"
-                          class="flex items-center py-1 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
+                          class="flex items-center py-1 text-white transition hover:text-space-cyan-lighter whitespace-nowrap"
                           :to="menu.href"
                         >
                           {{ menu.label }}
@@ -149,6 +149,7 @@ const menus = [
     label: "Developers",
     nav: [
       {
+        label: "",
         nav: [{ label: "Get Started", href: i18n + "/developers" }],
       },
       {
@@ -231,6 +232,7 @@ const menus = [
     label: "Community",
     nav: [
       {
+        label: "",
         nav: [
           { label: "Community Hub", href: i18n + "/community" },
           { label: "Ecosystem", href: i18n + "/community/ecosystem" },
@@ -260,6 +262,7 @@ const menus = [
     label: "About",
     nav: [
       {
+        label: "",
         nav: [
           { label: "2023 Starmap", href: i18n + "/starmap" },
           { label: "Astar Japan Lab", href: i18n + "/japan" },
