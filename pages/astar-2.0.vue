@@ -40,10 +40,10 @@
 const route = useRoute();
 import { meta } from "@/content/meta";
 const { t } = useI18n();
-const seoTitle = `${t("contact.title")} | ${meta.siteName} - ${t(
+const seoTitle = `${t("vision.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;
-const seoDescription = t("contact.description");
+const seoDescription = t("vision.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
 const seoImage = `${meta.image}common.png`;
 
