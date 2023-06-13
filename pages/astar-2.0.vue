@@ -194,10 +194,7 @@
 
 <script setup lang="ts">
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
-import {
-  XMarkIcon,
-  ArrowTopRightOnSquareIcon,
-} from "@heroicons/vue/24/outline";
+import { XMarkIcon } from "@heroicons/vue/24/outline";
 import {
   Dialog,
   DialogPanel,
@@ -246,7 +243,7 @@ const seoTitle = `${t("vision.title")} | ${meta.siteName} - ${t(
 )}`;
 const seoDescription = t("vision.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
-const seoImage = `${meta.image}common.png`;
+const seoImage = `${meta.image}vision.png`;
 
 useServerSeoMeta({
   title: () => seoTitle,
