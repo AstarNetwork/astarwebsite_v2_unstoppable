@@ -33,16 +33,20 @@
 
       <div class="relative">
         <div
-          class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 sm:text-lg mb-20 sm:mb-44 sm:leading-loose"
+          class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 sm:text-lg mb-20 sm:mb-44 sm:leading-loose space-y-12"
         >
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Astar Network has established itself as the leading smart contract
+            hub on Polkadot, with a strong presence in the Japanese market. Now,
+            we are proud to present Astar 2.0, the next big milestone in our
+            journey.
+          </p>
+          <p>
+            Astar 2.0 is built upon a clear long-term direction. We have defined
+            our mission to empower billions of individuals and enterprises by
+            harnessing the potential of Web3. Guided by our core values and
+            technology pillars, we aim to create a world where decentralized
+            systems improve lives and uplift communities.
           </p>
         </div>
 
