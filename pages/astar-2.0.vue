@@ -9,25 +9,43 @@
           width="1728"
           height="1728"
         />
-        <div
-          class="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-start"
-        >
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
+        <div class="flex items-center justify-start pt-48 pb-40">
+          <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="text-center">
-              <h1
-                class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
-              >
-                {{ $t("vision.title") }}
+              <h1 class="">
+                <img
+                  class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
+                  src="/images/vision/title.svg"
+                  alt="Astar 2.0 Building the Unstoppable"
+                />
               </h1>
-              <!-- <p class="sm:text-xl lg:text-2xl">
-                {{ $t("contact.description") }}
-              </p> -->
+              <p class="sm:text-xl lg:text-xl uppercase">
+                A scalable network powering a global web3 vision for all.
+              </p>
             </div>
           </div>
         </div>
       </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
-        WIP...
+      <div
+        class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-lg mb-44 leading-loose"
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <img
+          class="mx-auto w-full mb-12 drop-shadow"
+          src="/images/vision/concept.svg"
+          alt="Astar 2.0 Building the Unstoppable"
+        />
       </div>
     </template>
     <template #earth>
