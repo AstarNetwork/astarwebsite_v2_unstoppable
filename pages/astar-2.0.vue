@@ -46,7 +46,7 @@
           </p>
         </div>
 
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-20">
           <VisionSpaceStation
             v-on:showDetails="clickAction"
             class="w-full h-auto"
@@ -79,10 +79,10 @@
           </ul>
         </div>
 
-        <div class="absolute top-0 right-0 z-0">
+        <div class="absolute top-0 right-0 z-10">
           <ScrollParallax :speed="0.5">
             <img
-              class="w-full max-w-[800px] h-auto"
+              class="w-full max-w-[250px] sm:max-w-[450px] lg:max-w-[600px] xl:max-w-[800px] h-auto"
               src="/images/vision/planet.svg"
               alt=""
               data-not-lazy
@@ -90,10 +90,10 @@
           </ScrollParallax>
         </div>
 
-        <div class="absolute bottom-1/2 left-8 z-0 hidden lg:block">
+        <div class="absolute bottom-1/2 left-8 z-10 hidden lg:block">
           <ScrollParallax :speed="0.25">
             <img
-              class="h-auto w-full max-w-[240px]"
+              class="h-auto w-full max-w-[240px] float-animation"
               src="/images/vision/developer.svg"
               alt=""
               data-not-lazy
