@@ -12,7 +12,8 @@
         <div class="flex items-center justify-start pt-48 pb-40">
           <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="text-center">
-              <h1 class="">
+              <h1>
+                <span class="sr-only">Astar 2.0 Building the Unstoppable</span>
                 <img
                   class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
                   src="/images/vision/title.svg"
@@ -45,6 +46,26 @@
           v-on:showDetails="clickAction"
           class="w-full h-auto"
         />
+
+        <ul class="flex justify-center py-44">
+          <li class="border-r border-space-cyan px-6">
+            <img class="" src="/images/vision/logo-eth.svg" alt="Ethereum" />
+          </li>
+          <li class="border-r border-space-cyan px-6">
+            <img
+              class=""
+              src="/images/vision/logo-injective.svg"
+              alt="Injective"
+            />
+          </li>
+          <li class="px-6">
+            <img
+              class=""
+              src="/images/vision/logo-polkadot.svg"
+              alt="Polkadot"
+            />
+          </li>
+        </ul>
       </div>
 
       <TransitionRoot as="template" :show="open">
@@ -84,8 +105,8 @@
                   >
                     <div class="">
                       <DialogTitle
-                        as="h3"
-                        class="text-xl sm:text-3xl font-bold text-white leading-tight mb-6"
+                        as="h2"
+                        class="text-xl sm:text-4xl font-bold text-white leading-tight mb-6"
                       >
                         {{ visions[visionId]["title"] }}
                       </DialogTitle>
