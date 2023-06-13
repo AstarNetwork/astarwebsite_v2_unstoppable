@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <HomeGateway />
+      <HomeFeaturedContents />
 
       <HomeBecomeAStar class="pt-32 sm:pt-64 pb-32 sm:pb-64" />
 
