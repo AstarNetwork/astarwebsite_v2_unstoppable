@@ -7,7 +7,7 @@
     xmlns="http://www.w3.org/2000/svg"
   >
     <g>
-      <g id="space-station">
+      <g id="space-station" class="space-station">
         <path
           id="Vector"
           d="M747.191 362.295L759.889 352.074C725.33 344.709 684.398 345.068 638.22 353.136L646.855 362.016C675.202 356.782 708.015 356.863 747.191 362.295V362.295Z"

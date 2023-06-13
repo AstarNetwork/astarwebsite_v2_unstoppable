@@ -9,7 +9,9 @@
           width="1728"
           height="1728"
         />
-        <div class="flex items-center justify-start pt-48 pb-40">
+        <div
+          class="flex items-center justify-start pt-32 sm:pt-48 pb-24 sm:pb-40"
+        >
           <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 w-full">
             <div class="text-center">
               <h1>
@@ -18,6 +20,7 @@
                   class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
                   src="/images/vision/title.svg"
                   alt="Astar 2.0 Building the Unstoppable"
+                  data-not-lazy
                 />
               </h1>
               <p class="sm:text-xl lg:text-xl uppercase">
@@ -27,49 +30,80 @@
           </div>
         </div>
       </div>
-      <div
-        class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 text-lg mb-44 leading-loose"
-      >
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div>
 
-      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
-        <VisionSpaceStation
-          v-on:showDetails="clickAction"
-          class="w-full h-auto"
-        />
+      <div class="relative">
+        <div
+          class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 sm:text-lg mb-20 sm:mb-44 sm:leading-loose"
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
 
-        <ul class="flex justify-center py-44">
-          <li class="border-r border-space-cyan px-6">
-            <img class="" src="/images/vision/logo-eth.svg" alt="Ethereum" />
-          </li>
-          <li class="border-r border-space-cyan px-6">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-10">
+          <VisionSpaceStation
+            v-on:showDetails="clickAction"
+            class="w-full h-auto"
+          />
+
+          <ul
+            class="flex justify-center py-20 sm:py-44 divide-x divide-space-cyan"
+          >
+            <li class="px-2 sm:px-6">
+              <img
+                class="mx-auto w-full"
+                src="/images/vision/logo-eth.svg"
+                alt="Ethereum"
+              />
+            </li>
+            <li class="px-2 sm:px-6">
+              <img
+                class="mx-auto w-full"
+                src="/images/vision/logo-injective.svg"
+                alt="Injective"
+              />
+            </li>
+            <li class="px-2 sm:px-6">
+              <img
+                class="mx-auto w-full"
+                src="/images/vision/logo-polkadot.svg"
+                alt="Polkadot"
+              />
+            </li>
+          </ul>
+        </div>
+
+        <div class="absolute top-0 right-0 z-0">
+          <ScrollParallax :speed="0.5">
             <img
-              class=""
-              src="/images/vision/logo-injective.svg"
-              alt="Injective"
+              class="w-full max-w-[800px] h-auto"
+              src="/images/vision/planet.svg"
+              alt=""
+              data-not-lazy
             />
-          </li>
-          <li class="px-6">
+          </ScrollParallax>
+        </div>
+
+        <div class="absolute bottom-1/2 left-8 z-0 hidden lg:block">
+          <ScrollParallax :speed="0.25">
             <img
-              class=""
-              src="/images/vision/logo-polkadot.svg"
-              alt="Polkadot"
+              class="h-auto w-full max-w-[240px]"
+              src="/images/vision/developer.svg"
+              alt=""
+              data-not-lazy
             />
-          </li>
-        </ul>
+          </ScrollParallax>
+        </div>
       </div>
 
       <TransitionRoot as="template" :show="open">
-        <Dialog as="div" class="relative z-20" @close="open = false">
+        <Dialog as="div" class="relative z-50" @close="open = false">
           <TransitionChild
             as="template"
             enter="ease-out duration-300"
@@ -159,6 +193,7 @@
 </template>
 
 <script setup lang="ts">
+import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 import {
   XMarkIcon,
   ArrowTopRightOnSquareIcon,
@@ -243,6 +278,19 @@ definePageMeta({
   );
 }
 .vision-button {
-  @apply hover:cursor-pointer transition hover:brightness-150;
+  @apply hover:cursor-pointer transition hover:brightness-150 hover:-translate-y-4;
+}
+.space-station {
+  animation: 3s space-station-animation infinite;
+}
+
+@keyframes space-station-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }
 </style>
