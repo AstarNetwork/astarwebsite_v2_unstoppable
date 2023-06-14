@@ -94,6 +94,9 @@
                           v-for="menu in item.nav"
                           class="flex items-center py-1 text-white transition hover:text-space-cyan-lighter whitespace-nowrap"
                           :to="menu.href"
+                          :target="
+                            menu.href.includes('https') ? '_blank' : '_self'
+                          "
                         >
                           {{ menu.label }}
                           <ArrowTopRightOnSquareIcon

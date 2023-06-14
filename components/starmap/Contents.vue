@@ -75,8 +75,12 @@
                           about {{ discoveries[discoveryId]["title"] }}
                         </span>
                         <ArrowTopRightOnSquareIcon
+                          v-if="
+                            discoveries[discoveryId]['href'].includes('https')
+                          "
                           class="w-5 h-5 stroke-2 ml-1"
                         />
+                        <span v-else class="ml-1">-></span>
                       </NuxtLink>
                     </div>
                     <div
