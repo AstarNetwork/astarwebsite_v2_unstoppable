@@ -136,16 +136,16 @@
                 leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <DialogPanel
-                  class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark px-4 py-8 text-left shadow-xl transition-all sm:w-full lg:p-16 sm:max-w-4xl"
+                  class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark px-6 py-12 text-left shadow-xl transition-all sm:w-full lg:p-16 sm:max-w-4xl"
                 >
                   <div class="">
                     <DialogTitle
                       as="h3"
-                      class="text-xl sm:text-4xl font-bold text-white leading-tight mb-6 pb-6 text-center border-b border-space-cyan"
+                      class="text-2xl sm:text-4xl font-bold text-white leading-tight mb-4 sm:mb-6 pb-4 sm:pb-6 text-center border-b border-space-cyan"
                     >
                       {{ visions[visionId]["title"] }}
                     </DialogTitle>
-                    <p class="text-lg leading-loose">
+                    <p class="sm:text-lg sm:leading-loose">
                       {{ visions[visionId]["description"] }}
                     </p>
                   </div>
