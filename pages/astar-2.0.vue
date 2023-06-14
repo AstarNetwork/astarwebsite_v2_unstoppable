@@ -46,7 +46,10 @@
             our mission to empower billions of individuals and enterprises by
             harnessing the potential of Web3. Guided by our core values and
             technology pillars, we aim to create a world where decentralized
-            systems improve lives and uplift communities.
+            systems empower users to take control of their data, and privacy,
+            and empower local communities, on and offline, to come together.
+            Astar 2.0 gives developers the tools to build toward a better future
+            web for all.
           </p>
         </div>
 
