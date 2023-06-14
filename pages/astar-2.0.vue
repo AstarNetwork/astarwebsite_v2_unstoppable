@@ -311,15 +311,16 @@ definePageMeta({
     transform: translateY(-30px);
   }
 }
-#supernova-arrow {
+#supernova {
   animation: 1.5s supernova-animation infinite;
 }
 @keyframes supernova-animation {
   0%,
   100% {
-    @apply opacity-20;
+    @apply opacity-40;
   }
-  50% {
+  30%,
+  70% {
     @apply opacity-100;
   }
 }
