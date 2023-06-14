@@ -32,37 +32,56 @@
       </div>
 
       <div class="relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-30">
-          <VisionSpaceStation
-            v-on:showDetails="clickAction"
-            class="w-full h-auto"
-          />
-
-          <ul
-            class="flex justify-center items-center py-20 sm:py-44 divide-x divide-space-cyan"
-          >
-            <li v-for="logo in logos" class="px-2 sm:px-6">
-              <img
-                class="mx-auto w-full"
-                :src="`/images/vision/${logo.image}`"
-                :alt="logo.title"
-              />
-            </li>
-          </ul>
-        </div>
-
         <div
-          class="absolute top-0 -left-20 xl:left-0 -right-20 xl:right-0 z-10"
+          class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-24 sm:text-lg sm:leading-loose space-y-12"
         >
-          <ScrollParallax :speed="0.15">
-            <img
-              class="w-full max-w-[1600px] mx-auto"
-              src="/images/vision/supernova.webp"
-              alt=""
-              data-not-lazy
-            />
-          </ScrollParallax>
+          <p>
+            Astar Network has established itself as the leading smart contract
+            hub on Polkadot, with a strong presence in the Japanese market. Now,
+            we are proud to present Astar 2.0, the next big milestone in our
+            journey.
+          </p>
+          <p>
+            Astar 2.0 is built upon a clear long-term direction. We have defined
+            our mission to empower billions of individuals and enterprises by
+            harnessing the potential of Web3. Guided by our core values and
+            technology pillars, we aim to create a world where decentralized
+            systems improve lives and uplift communities.
+          </p>
         </div>
+
+        <div class="relative">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-30">
+            <VisionSpaceStation
+              v-on:showDetails="clickAction"
+              class="w-full h-auto"
+            />
+          </div>
+          <div
+            class="absolute -top-20 -left-20 xl:left-0 -right-20 xl:right-0 z-10"
+          >
+            <ScrollParallax :speed="0.1">
+              <img
+                class="w-full max-w-[1600px] mx-auto"
+                src="/images/vision/supernova.webp"
+                alt=""
+                data-not-lazy
+              />
+            </ScrollParallax>
+          </div>
+        </div>
+
+        <ul
+          class="flex justify-center items-center py-20 sm:py-44 divide-x divide-space-cyan"
+        >
+          <li v-for="logo in logos" class="px-2 sm:px-6">
+            <img
+              class="mx-auto w-full"
+              :src="`/images/vision/${logo.image}`"
+              :alt="logo.title"
+            />
+          </li>
+        </ul>
 
         <div class="absolute top-0 right-0 z-10">
           <ScrollParallax :speed="0.6">
@@ -75,17 +94,15 @@
           </ScrollParallax>
         </div>
 
-        <div class="absolute top-1/2 left-0 w-full z-10 hidden lg:block">
-          <div class="max-w-7xl w-full mx-auto px-4 sm:px-6">
-            <ScrollParallax :speed="0.1">
-              <img
-                class="h-auto w-full max-w-[240px] float-animation"
-                src="/images/vision/developer.svg"
-                alt=""
-                data-not-lazy
-              />
-            </ScrollParallax>
-          </div>
+        <div class="absolute bottom-1/4 left-12 w-full z-10 hidden lg:block">
+          <ScrollParallax :speed="0.1">
+            <img
+              class="h-auto w-full max-w-[240px] float-animation"
+              src="/images/vision/developer.svg"
+              alt=""
+              data-not-lazy
+            />
+          </ScrollParallax>
         </div>
       </div>
 
@@ -203,13 +220,13 @@ interface Vision {
 
 const visions: { [index: string]: Vision } = {
   staking: {
-    title: "dApps Staking",
+    title: "Staking 2.0",
   },
   startale: {
     title: "Startale",
   },
   tokenomics: {
-    title: "Tokenomics",
+    title: "Tokenomics 2.0",
   },
   foundation: {
     title: "Astar Foundation",

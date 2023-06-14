@@ -365,6 +365,12 @@ const discoveries: { [index: string]: Discovery } = {
     href: "https://medium.com/astar-network/wasm-launch-day-april-6-1efa94dba798",
     image: "wasm.webp",
   },
+  vision: {
+    title: t("starmap.growth.vision.title"),
+    description: t("starmap.growth.vision.description"),
+    href: "https://medium.com/astar-network/wasm-launch-day-april-6-1efa94dba798",
+    image: "vision.webp",
+  },
   comingSoon: {
     title: "Coming soon!",
     description: "",

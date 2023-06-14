@@ -31,6 +31,10 @@
       "wasm": {
         "title": "AstarがWasmに対応！",
         "description": "Astar Network上でink！スマートコントラクトが開発可能になり、安定したWasm環境をサポートする最初のパラチェーンとなりました。ソフトウェア開発者は、Rustプログラミングを使用して、Astar上でプロジェクトやアイデアを構築することができます。\n\nWebAssemblyは、コードを実行するためのポータブルで開発者に優しい環境を提供し、Astar上で構築されるアプリケーションのパフォーマンス、セキュリティ、相互運用性を向上させるため、Astarにとって非常に重要です。"
+      },
+      "vision": {
+        "title": "Astar 2.0",
+        "description": "Astar 2.0の説明"
       }
     },
     "expansion": {
