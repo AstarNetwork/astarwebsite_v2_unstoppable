@@ -75,7 +75,7 @@
             Astar Japan Lab fuels the growth of Japanese services and businesses
           </p>
           <NuxtLink
-            :to="localePath('/starmap')"
+            :to="localePath('/japan')"
             class="text-space-cyan hover:underline hover:text-space-cyan-lighter"
           >
             {{ $t("learn_more") }} ->
