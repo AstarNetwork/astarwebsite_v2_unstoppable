@@ -23,16 +23,16 @@
                   data-not-lazy
                 />
               </h1>
-              <p class="sm:text-xl lg:text-xl uppercase">
-                A scalable network powering a global web3 vision for all.
-              </p>
+              <h2 class="sm:text-xl lg:text-xl">
+                A Scalable Network Powering a Global Web3 Vision for All.
+              </h2>
             </div>
           </div>
         </div>
       </div>
 
       <div class="relative">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-30">
           <VisionSpaceStation
             v-on:showDetails="clickAction"
             class="w-full h-auto"
@@ -41,34 +41,33 @@
           <ul
             class="flex justify-center items-center py-20 sm:py-44 divide-x divide-space-cyan"
           >
-            <li class="px-2 sm:px-6">
+            <li v-for="logo in logos" class="px-2 sm:px-6">
               <img
                 class="mx-auto w-full"
-                src="/images/vision/logo-eth.svg"
-                alt="Ethereum"
-              />
-            </li>
-            <li class="px-2 sm:px-6">
-              <img
-                class="mx-auto w-full"
-                src="/images/vision/logo-injective.svg"
-                alt="Injective"
-              />
-            </li>
-            <li class="px-2 sm:px-6">
-              <img
-                class="mx-auto w-full"
-                src="/images/vision/logo-polkadot.svg"
-                alt="Polkadot"
+                :src="`/images/vision/${logo.image}`"
+                :alt="logo.title"
               />
             </li>
           </ul>
         </div>
 
-        <div class="absolute top-0 right-0 z-10">
-          <ScrollParallax :speed="0.5">
+        <div
+          class="absolute top-0 -left-20 xl:left-0 -right-20 xl:right-0 z-10"
+        >
+          <ScrollParallax :speed="0.15">
             <img
-              class="w-full max-w-[250px] sm:max-w-[450px] lg:max-w-[600px] xl:max-w-[800px] h-auto"
+              class="w-full max-w-[1600px] mx-auto"
+              src="/images/vision/supernova.webp"
+              alt=""
+              data-not-lazy
+            />
+          </ScrollParallax>
+        </div>
+
+        <div class="absolute top-0 right-0 z-10">
+          <ScrollParallax :speed="0.6">
+            <img
+              class="w-full max-w-[250px] sm:max-w-[450px] lg:max-w-[600px] xl:max-w-[700px] h-auto"
               src="/images/vision/planet.svg"
               alt=""
               data-not-lazy
@@ -76,15 +75,17 @@
           </ScrollParallax>
         </div>
 
-        <div class="absolute bottom-1/2 left-8 z-10 hidden lg:block">
-          <ScrollParallax :speed="0.25">
-            <img
-              class="h-auto w-full max-w-[240px] float-animation"
-              src="/images/vision/developer.svg"
-              alt=""
-              data-not-lazy
-            />
-          </ScrollParallax>
+        <div class="absolute top-1/2 left-0 w-full z-10 hidden lg:block">
+          <div class="max-w-7xl w-full mx-auto px-4 sm:px-6">
+            <ScrollParallax :speed="0.1">
+              <img
+                class="h-auto w-full max-w-[240px] float-animation"
+                src="/images/vision/developer.svg"
+                alt=""
+                data-not-lazy
+              />
+            </ScrollParallax>
+          </div>
         </div>
       </div>
 
@@ -125,7 +126,7 @@
                   >
                     <div class="">
                       <DialogTitle
-                        as="h2"
+                        as="h3"
                         class="text-xl sm:text-4xl font-bold text-white leading-tight mb-6"
                       >
                         {{ visions[visionId]["title"] }}
@@ -219,7 +220,25 @@ const visions: { [index: string]: Vision } = {
   link: {
     title: "Astar Link",
   },
+  supernova: {
+    title: "Supernova",
+  },
 };
+
+const logos = [
+  {
+    title: "Ethereum",
+    image: "logo-eth.svg",
+  },
+  {
+    title: "Injective",
+    image: "logo-injective.svg",
+  },
+  {
+    title: "Polkadot",
+    image: "logo-polkadot.svg",
+  },
+];
 
 const route = useRoute();
 import { meta } from "@/content/meta";
@@ -263,10 +282,9 @@ definePageMeta({
 .vision-button {
   @apply hover:cursor-pointer transition hover:brightness-150 hover:-translate-y-4;
 }
-.space-station {
+#space-station {
   animation: 3s space-station-animation infinite;
 }
-
 @keyframes space-station-animation {
   0%,
   100% {
@@ -274,6 +292,18 @@ definePageMeta({
   }
   50% {
     transform: translateY(-30px);
+  }
+}
+#supernova-arrow {
+  animation: 1.5s supernova-animation infinite;
+}
+@keyframes supernova-animation {
+  0%,
+  100% {
+    @apply opacity-20;
+  }
+  50% {
+    @apply opacity-100;
   }
 }
 </style>
