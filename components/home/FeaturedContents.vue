@@ -3,35 +3,37 @@
     class="lg:flex max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full lg:space-x-4 space-y-4 lg:space-y-0"
   >
     <div
-      class="space-gradient rounded-2xl p-6 sm:p-12 before:hidden lg:w-1/2 text-center hover:brightness-110"
+      class="space-gradient rounded-2xl before:hidden lg:w-1/2 text-center hover:brightness-110"
     >
       <img
-        class="mx-auto -mt-24 sm:-mt-36 -mb-10 sm:-mb-16 w-full"
-        src="/images/home/reading-ecosystem.svg"
+        class="mx-auto -mt-24 sm:-mt-28 -mb-10 sm:-mb-16 w-full"
+        src="/images/home/featured-contents-vision.webp"
         alt=""
         data-not-lazy
       />
-      <h2 class="mb-2">
-        <span class="sr-only">Astar 2.0</span>
-        <img
-          class="mx-auto drop-shadow"
-          src="/images/home/featured-contents-vision-title.svg"
-          alt="Astar 2.0"
-          data-not-lazy
-        />
-      </h2>
-      <p class="text-xl sm:text-3xl font-bold">Building the Unstoppable</p>
-      <p class="sm:text-lg">
-        A scalable network powering <br />a global web3 vision for all.
-      </p>
-      <Button
-        variant="outlined"
-        size="lg"
-        :href="localePath('/astar-2.0')"
-        class="w-[280px] sm:w-auto mt-6 sm:mt-8"
-      >
-        {{ $t("learn_more") }} ->
-      </Button>
+      <div class="p-6 sm:p-12 !pt-0">
+        <h2 class="mb-2">
+          <span class="sr-only">Astar 2.0</span>
+          <img
+            class="mx-auto drop-shadow"
+            src="/images/home/featured-contents-vision-title.svg"
+            alt="Astar 2.0"
+            data-not-lazy
+          />
+        </h2>
+        <p class="text-xl sm:text-3xl font-bold">Building the Unstoppable</p>
+        <p class="sm:text-lg">
+          A scalable network powering <br />a global web3 vision for all.
+        </p>
+        <Button
+          variant="outlined"
+          size="lg"
+          :href="localePath('/astar-2.0')"
+          class="w-[280px] sm:w-auto mt-6 sm:mt-8"
+        >
+          {{ $t("learn_more") }} ->
+        </Button>
+      </div>
     </div>
     <div class="flex flex-col lg:w-1/2 space-y-4">
       <div
