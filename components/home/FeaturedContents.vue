@@ -28,7 +28,7 @@
         <Button
           variant="outlined"
           size="lg"
-          :href="localePath('/astar-2.0')"
+          :href="localePath('/astar2')"
           class="w-[280px] sm:w-auto mt-6 sm:mt-8"
         >
           {{ $t("learn_more") }} ->

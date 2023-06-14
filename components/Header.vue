@@ -34,7 +34,7 @@
           <div class="hidden lg:flex lg:items-center">
             <nav class="flex items-center space-x-4 xl:space-x-8">
               <NuxtLink
-                :to="localePath('/astar-2.0')"
+                :to="localePath('/astar2')"
                 class="text-space-teal group hover:text-space-teal-lighter font-medium transition text-tiny xl:text-base flex items-center"
               >
                 Astar 2.0

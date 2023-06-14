@@ -46,7 +46,7 @@
               <ul class="border-b border-gray-600">
                 <li>
                   <NuxtLink
-                    :to="localePath('/astar-2.0')"
+                    :to="localePath('/astar2')"
                     class="text-space-teal group hover:text-space-teal-lighter flex items-center border-t border-gray-600 px-6 py-5"
                   >
                     Astar 2.0
