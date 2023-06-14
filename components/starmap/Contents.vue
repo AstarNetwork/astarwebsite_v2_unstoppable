@@ -63,7 +63,11 @@
                       <NuxtLink
                         v-if="discoveries[discoveryId]['href']"
                         :to="discoveries[discoveryId]['href']"
-                        target="_blank"
+                        :target="
+                          discoveries[discoveryId]['href'].includes('https')
+                            ? '_blank'
+                            : '_self'
+                        "
                         class="flex items-center transition text-space-cyan hover:underline hover:text-space-cyan-lighter mt-5 outline-none"
                       >
                         {{ $t("starmap.learn_more") }}
@@ -212,6 +216,11 @@
                     {{ $t("starmap.growth.wasm.title") }}
                   </span>
                 </li>
+                <li>
+                  <span @click="clickAction('vision')" class="popup-link"
+                    >Astar 2.0</span
+                  >
+                </li>
                 <li>RMRK ink! NFT</li>
                 <li>
                   Swanky /
@@ -333,6 +342,7 @@ interface Discovery {
 }
 
 const { t, locale } = useI18n();
+const i18n = locale.value === "ja" ? "/ja" : "";
 
 const discoveries: { [index: string]: Discovery } = {
   xvm: {
@@ -368,7 +378,7 @@ const discoveries: { [index: string]: Discovery } = {
   vision: {
     title: t("starmap.growth.vision.title"),
     description: t("starmap.growth.vision.description"),
-    href: "https://medium.com/astar-network/wasm-launch-day-april-6-1efa94dba798",
+    href: i18n + "/astar2",
     image: "vision.webp",
   },
   comingSoon: {
