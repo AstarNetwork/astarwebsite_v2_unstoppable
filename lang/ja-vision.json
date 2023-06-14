@@ -2,26 +2,13 @@
   "vision": {
     "title": "Astar 2.0",
     "description": "Astar 2.0: Building the Unstoppable. A Scalable Network Powering a Global Web3 Vision for All.",
-    "staking": {
-      "description": "With Astar 1.0, we succeeded in establishing a mechanism empowering builders with passive income. For the second iteration, we’re updating our dApp staking program to better align incentives between projects, builders, and users, ensuring that everyone benefits Astar 2.0 will focus on creating seamless user experiences adding data as well as further integrations to become the go-to place to support and reward developers."
-    },
-    "startale": {
-      "description": "Startale Labs is a technology company building the tools necessary to enhance web3 adoption in the Japanese market and scale it to reach billions. By working closely with leading enterprises, Startale will play a pivotal role in onboarding new users to Astar and pave the way for them to expand beyond the borders of Japan."
-    },
-    "tokenomics": {
-      "description": "As the network evolves, so do our tokenomics. We’re revising our tokenomics to best serve the needs of network participants, from users and builders to enterprise partners. With Tokenomics 2.0, you can expect a sustainable token structure and a lower inflation rate. Keep up to date with the latest on our forum."
-    },
-    "foundation": {
-      "description": "The Astar Foundation is one of many entities in the Astar ecosystem and is currently the main contributor and maintainer of the Astar Network Source Code. The Foundation deploys resources to expand Astar Network through partnerships, community activities, hiring developers, awarding grants, supporting projects, and other initiatives."
-    },
-    "dao": {
-      "description": "In the future, Astar will become gradually decentralized, with our ultimate form being that of a DAO where anyone can suggest ideas and vote on proposals to steer Astar closer to its mission. This will involve handing over ownership to the community and ensuring high accessibility."
-    },
-    "link": {
-      "description": "Astar is evolving into Astar Link, a hub connecting all currently fragmented layers of the blockchain industry to provide a unified experience for developers and users. Combining great flexibility and customization options, builders can create unique solutions limited only by their imagination. All of this is powered by tailor-made SDKs that offer a solution for any use-case to be implemented on top of our smart contract multi-virtual machine hub. \n\nAstar Link unlocks a vast plethora of use cases that were held back by a lack of tools or fragmentation from gaming to enterprise.k"
-    },
-    "supernova": {
-      "description": "Astar has established itself as the go-to choice for developers crafting the future of web3 in Japan. However, our journey doesn't stop there. Astar 2.0 will onboard millions of end-users in Japan through partnerships with leading Japanese enterprises."
-    }
+    "intro": "Astar Networkは、Polkadotにおける主要なスマートコントラクトハブとしての地位を確立し、日本市場でも高い存在感を示しています。そして今、私たちにとって次の大きな節目となるAstar 2.0を発表できることを誇りに思います。\n\nAstar 2.0は、明確な長期的目標を見据えて作られました。Web3の可能性を活用することで、何十億もの個人や企業に力を与えることをミッションとしています。私たちのコアバリューとテクノロジーに基づき、分散型システムによってユーザーが自分のデータとプライバシーをコントロールできるようになり、オンラインとオフラインの地域コミュニティが団結できるような世界を創造することを目指しています。Astar 2.0は、すべての人にとってより良い未来のWebを構築するためのツールを、開発者に提供します。",
+    "staking": "Astar 1.0では、開発者が受動的な収入を得られる仕組みを構築することに成功しました。第2弾では、プロジェクト、開発者、ユーザーの間でより良いインセンティブが得られるよう、dAppステーキングプログラムを更新し、誰もが利益を得られるようにしていきます。 Astar 2.0では、データの追加やさらなる統合を行い、シームレスなユーザーエクスペリエンスを作ることに重点を置き、開発者をサポートし、報酬を提供するための一番の場所となることを目指しています。",
+    "startale": "Startale Labsは、日本市場における Web3 の普及を促進し、数十億人規模に拡大するために必要なツールを構築しているテクノロジー企業です。Startale Labsは、大手企業との緊密な連携を通じて、Astarの新規ユーザー獲得に極めて重要な役割を果たし、彼らが日本国内だけでなく海外へも進出できるようサポートします。",
+    "tokenomics": "ネットワークの進化に伴い、トークンエコノミクスも進化しています。私たちは、ユーザーや開発者から企業パートナーに至るまで、ネットワーク参加者のニーズに最も適したトークンエコノミクスなるよう改訂しています。Tokenomics 2.0では、持続可能なトークン構造と低いインフレ率を期待することができます。最新情報はフォーラムでご確認ください。",
+    "foundation": "Astar Foundationは、Astarエコシステム内の組織の1つであり、現在Astar Networkソースコードの主要な貢献者であり管理者です。Astar Foundationは、パートナーシップ、コミュニティ活動、開発者の雇用、助成金の授与、プロジェクトの支援、その他の取り組みを通じて、Astar Networkを拡大するためのリソースを展開しています。",
+    "dao": "将来的に、Astarは徐々に分散化され、最終的にはDAOとなります。誰もがAstarのミッションに近づくためのアイデアを提案し、投票することができるようになる予定です。そのためには、オーナーシップをコミュニティに委ね、高いアクセシビリティを確保する必要があります。",
+    "link": "Astarは、現在断片化されているブロックチェーンのすべてのレイヤーをつなぎ、開発者やユーザーに統一された体験を提供するハブであるAstar Linkへと進化しています。大きな柔軟性とカスタマイズオプションを組み合わせることで、開発者は制限を受けることなく、ユニークなソリューションを作成することができます。これらはすべて、私たちのスマートコントラクトのマルチバーチャルマシンハブ上に実装されるあらゆるユースケースのためのソリューションを、専用のSDKによって提供されます。\n\nAstar Linkは、ゲームからエンタープライズまで、ツールの不足や断片化によって妨げられていた様々なユースケースを開放しました。",
+    "supernova": "Astarは、日本のWeb3の未来を担う開発者に選ばれる存在として、その地位を確立しています。しかし、私たちの旅はそこで終わりません。Astar 2.0は、日本の大手企業とのパートナーシップを通じて、日本の数百万人のエンドユーザーに提供していく予定です。"
   }
 }

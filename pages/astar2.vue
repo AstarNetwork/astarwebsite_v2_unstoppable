@@ -188,31 +188,31 @@ interface Vision {
 const visions: { [index: string]: Vision } = {
   staking: {
     title: "Staking 2.0",
-    description: t("vision.staking.description"),
+    description: t("vision.staking"),
   },
   startale: {
     title: "Startale",
-    description: t("vision.startale.description"),
+    description: t("vision.startale"),
   },
   tokenomics: {
     title: "Tokenomics 2.0",
-    description: t("vision.tokenomics.description"),
+    description: t("vision.tokenomics"),
   },
   foundation: {
     title: "Astar Foundation",
-    description: t("vision.foundation.description"),
+    description: t("vision.foundation"),
   },
   dao: {
     title: "Astar DAO",
-    description: t("vision.dao.description"),
+    description: t("vision.dao"),
   },
   link: {
     title: "Astar Link",
-    description: t("vision.link.description"),
+    description: t("vision.link"),
   },
   supernova: {
     title: "Incoming",
-    description: t("vision.supernova.description"),
+    description: t("vision.supernova"),
   },
 };
 
