@@ -136,44 +136,18 @@
                 leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
               >
                 <DialogPanel
-                  class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark px-4 py-8 text-left shadow-xl transition-all sm:w-full lg:p-12 sm:max-w-7xl"
+                  class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark px-4 py-8 text-left shadow-xl transition-all sm:w-full lg:p-16 sm:max-w-4xl"
                 >
-                  <div
-                    class="flex items-center flex-col-reverse lg:flex-row space-x-12"
-                  >
-                    <div class="">
-                      <DialogTitle
-                        as="h3"
-                        class="text-xl sm:text-4xl font-bold text-white leading-tight mb-6"
-                      >
-                        {{ visions[visionId]["title"] }}
-                      </DialogTitle>
-                      <p class="text-lg leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                        non proident, sunt in culpa qui officia deserunt mollit
-                        anim id est laborum.
-                      </p>
-                    </div>
-                    <div
-                      class="shrink-0 ml-2 w-96 h-96 flex items-center justify-center"
+                  <div class="">
+                    <DialogTitle
+                      as="h3"
+                      class="text-xl sm:text-4xl font-bold text-white leading-tight mb-6 pb-6 text-center border-b border-space-cyan"
                     >
-                      image
-                      <!-- <img
-                        class=""
-                        :src="
-                          '/images/starmap/' + discoveries[discoveryId]['image']
-                        "
-                        :alt="discoveries[discoveryId]['title']"
-                        width="580"
-                        height="480"
-                      /> -->
-                    </div>
+                      {{ visions[visionId]["title"] }}
+                    </DialogTitle>
+                    <p class="text-lg leading-loose">
+                      {{ visions[visionId]["description"] }}
+                    </p>
                   </div>
 
                   <button
@@ -214,31 +188,41 @@ const clickAction = (vision: string) => {
   open.value = true;
 };
 
+const { t } = useI18n();
+
 interface Vision {
   title: string;
+  description: string;
 }
 
 const visions: { [index: string]: Vision } = {
   staking: {
     title: "Staking 2.0",
+    description: t("vision.staking.description"),
   },
   startale: {
     title: "Startale",
+    description: t("vision.startale.description"),
   },
   tokenomics: {
     title: "Tokenomics 2.0",
+    description: t("vision.tokenomics.description"),
   },
   foundation: {
     title: "Astar Foundation",
+    description: t("vision.foundation.description"),
   },
   dao: {
     title: "Astar DAO",
+    description: t("vision.dao.description"),
   },
   link: {
     title: "Astar Link",
+    description: t("vision.link.description"),
   },
   supernova: {
-    title: "Supernova",
+    title: "Incoming",
+    description: t("vision.supernova.description"),
   },
 };
 
@@ -259,7 +243,6 @@ const logos = [
 
 const route = useRoute();
 import { meta } from "@/content/meta";
-const { t } = useI18n();
 const seoTitle = `${t("vision.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;
