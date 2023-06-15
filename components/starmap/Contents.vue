@@ -273,7 +273,7 @@
                   }}
                 </li>
                 <li>
-                  {{ locale === "ja" ? "トークンエコノミクス" : "Tokenomics" }}
+                  {{ locale === "ja" ? "トークノミクス" : "Tokenomics" }}
                 </li>
                 <li>
                   {{ locale === "ja" ? "XCMコントラクト" : "XCM Contracts" }}
@@ -380,8 +380,8 @@ const discoveries: { [index: string]: Discovery } = {
     image: "wasm.webp",
   },
   vision: {
-    title: t("starmap.growth.vision.title"),
-    description: t("starmap.growth.vision.description"),
+    title: "Astar 2.0",
+    description: t("vision.intro"),
     href: i18n + "/astar2",
     image: "vision.webp",
   },
