@@ -28,135 +28,87 @@
           </NuxtLink>
 
           <div class="-my-2 -mr-2 lg:hidden">
-            <MobileNav :network="network" />
+            <MobileNav :network="network" :menus="menus" />
           </div>
 
           <div class="hidden lg:flex lg:items-center">
             <nav class="flex items-center space-x-4 xl:space-x-8">
-              <NuxtLink :to="localePath('/starmap')" class="nav-item">
-                2023 Starmap
-              </NuxtLink>
-              <NuxtLink :to="localePath('/developers')" class="nav-item">
-                Developers
+              <NuxtLink
+                :to="localePath('/astar2')"
+                class="text-space-teal group hover:text-space-teal-lighter font-medium transition text-tiny xl:text-base flex items-center"
+              >
+                Astar 2.0
+                <span
+                  class="bg-space-teal group-hover:bg-space-teal-lighter text-space-gray-dark text-[0.7rem] block px-2 rounded-sm ml-1"
+                >
+                  New
+                </span>
               </NuxtLink>
 
-              <Popover v-slot="{ open }" class="relative">
-                <PopoverButton
-                  :class="[
-                    open
-                      ? 'text-space-cyan-light'
-                      : 'text-white hover:text-space-cyan-light',
-                    'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 font-medium transition text-tiny xl:text-base',
-                  ]"
-                >
-                  <span>Network</span>
-                  <ChevronDownIcon
+              <template v-for="category in menus">
+                <Popover v-slot="{ open }" class="relative">
+                  <PopoverButton
                     :class="[
                       open
-                        ? 'text-space-cyan-light rotate-180 transform'
-                        : 'text-gray-200',
-                      'ml-1 h-4 w-4 group-hover:text-space-cyan-light stroke-2',
+                        ? 'text-space-cyan-light'
+                        : 'text-white hover:text-space-cyan-light',
+                      'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 font-medium transition text-tiny xl:text-base',
                     ]"
-                    aria-hidden="true"
-                  />
-                </PopoverButton>
-
-                <transition
-                  enter-active-class="transition ease-out duration-200"
-                  enter-from-class="opacity-0 -translate-y-1"
-                  enter-to-class="opacity-100 translate-y-0"
-                  leave-active-class="transition ease-in duration-150"
-                  leave-from-class="opacity-100 translate-y-0"
-                  leave-to-class="opacity-0 -translate-y-1"
-                >
-                  <PopoverPanel
-                    class="bg-space-gray-dark shadow-lg bg-opacity-95 absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 pt-10 pb-16 px-16 after:bottom-[100%] after:border-t-transparent after:border-b-space-gray-dark after:absolute after:left-1/2 after:-translate-x-1/2 after:border-8 after:border-x-transparent after:opacity-95"
                   >
-                    <ul class="grid grid-cols-3 gap-12 w-full">
-                      <li v-for="item in network" class="w-48 xl:w-60">
-                        <span
-                          class="uppercase block border-b border-gray-600 text-gray-400 pb-1 mb-3"
-                          >{{ item.label }}</span
+                    <span>{{ category.label }}</span>
+                    <ChevronDownIcon
+                      :class="[
+                        open
+                          ? 'text-space-cyan-light rotate-180 transform'
+                          : 'text-gray-200',
+                        'ml-1 h-4 w-4 group-hover:text-space-cyan-light stroke-2',
+                      ]"
+                      aria-hidden="true"
+                    />
+                  </PopoverButton>
+                  <transition
+                    enter-active-class="transition ease-out duration-200"
+                    enter-from-class="opacity-0 -translate-y-1"
+                    enter-to-class="opacity-100 translate-y-0"
+                    leave-active-class="transition ease-in duration-150"
+                    leave-from-class="opacity-100 translate-y-0"
+                    leave-to-class="opacity-0 -translate-y-1"
+                  >
+                    <PopoverPanel
+                      :class="`bg-space-gray-dark shadow-lg bg-opacity-95 absolute left-1/2 z-10 mt-4 -translate-x-1/2 py-12 px-8 ${
+                        category.label === 'Network'
+                          ? 'w-[700px] grid grid-cols-3'
+                          : 'w-72'
+                      }`"
+                    >
+                      <div v-for="item in category.nav">
+                        <p
+                          v-if="item.label !== ''"
+                          :class="`text-xs uppercase text-gray-400 mb-1 ${
+                            category.label !== 'Network' && 'mt-8'
+                          }`"
                         >
-                        <ul>
-                          <li v-for="nav in item.nav">
-                            <NuxtLink
-                              class="inline-block py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                              :to="nav.href"
-                              target="_blank"
-                            >
-                              {{ nav.label }}
-                              <ArrowTopRightOnSquareIcon
-                                class="w-4 h-4 inline-block stroke-2"
-                              />
-                            </NuxtLink>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </PopoverPanel>
-                </transition>
-              </Popover>
-
-              <Popover v-slot="{ open }" class="relative">
-                <PopoverButton
-                  :class="[
-                    open
-                      ? 'text-space-cyan-light'
-                      : 'text-white hover:text-space-cyan-light',
-                    'group inline-flex items-center focus:outline-none focus:ring-0 focus:ring-offset-0 font-medium transition text-tiny xl:text-base',
-                  ]"
-                >
-                  <span>Community</span>
-                  <ChevronDownIcon
-                    :class="[
-                      open
-                        ? 'text-space-cyan-light rotate-180 transform'
-                        : 'text-gray-200',
-                      'ml-1 h-4 w-4 group-hover:text-space-cyan-light stroke-2',
-                    ]"
-                    aria-hidden="true"
-                  />
-                </PopoverButton>
-                <transition
-                  enter-active-class="transition ease-out duration-200"
-                  enter-from-class="opacity-0 -translate-y-1"
-                  enter-to-class="opacity-100 translate-y-0"
-                  leave-active-class="transition ease-in duration-150"
-                  leave-from-class="opacity-100 translate-y-0"
-                  leave-to-class="opacity-0 -translate-y-1"
-                >
-                  <PopoverPanel
-                    class="bg-space-gray-dark shadow-lg bg-opacity-95 absolute left-1/2 z-10 mt-4 w-screen max-w-max -translate-x-1/2 py-6 px-10 after:bottom-[100%] after:border-t-transparent after:border-b-space-gray-dark after:absolute after:left-1/2 after:-translate-x-1/2 after:border-8 after:border-x-transparent after:opacity-95"
-                  >
-                    <NuxtLink
-                      class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                      :to="localePath('/community')"
-                    >
-                      Overview
-                      <ArrowRightIcon class="inline-block w-5 h-5" />
-                    </NuxtLink>
-                    <NuxtLink
-                      class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                      :to="localePath('/community/ecosystem')"
-                    >
-                      Ecosystem
-                      <ArrowRightIcon class="inline-block w-5 h-5" />
-                    </NuxtLink>
-                    <NuxtLink
-                      class="flex justify-between items-center w-36 py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                      :to="localePath('/blog')"
-                    >
-                      Blog
-                      <ArrowRightIcon class="inline-block w-5 h-5" />
-                    </NuxtLink>
-                  </PopoverPanel>
-                </transition>
-              </Popover>
-
-              <NuxtLink :to="localePath('/japan')" class="nav-item">
-                Japan Lab
-              </NuxtLink>
+                          {{ item.label }}
+                        </p>
+                        <NuxtLink
+                          v-for="menu in item.nav"
+                          class="flex items-center py-1 text-white transition hover:text-space-cyan-lighter whitespace-nowrap"
+                          :to="menu.href"
+                          :target="
+                            menu.href.includes('https') ? '_blank' : '_self'
+                          "
+                        >
+                          {{ menu.label }}
+                          <ArrowTopRightOnSquareIcon
+                            v-if="menu.href.includes('https')"
+                            class="w-4 h-4 ml-1"
+                          />
+                        </NuxtLink>
+                      </div>
+                    </PopoverPanel>
+                  </transition>
+                </Popover>
+              </template>
             </nav>
             <div class="ml-4 xl:ml-6">
               <Button
@@ -179,8 +131,8 @@
 
 <script setup>
 const localePath = useLocalePath();
-
 const { locale } = useI18n();
+const i18n = locale.value === "ja" ? "/ja" : "";
 
 import {
   Popover,
@@ -191,63 +143,144 @@ import {
 import {
   ChevronDownIcon,
   ArrowTopRightOnSquareIcon,
-  ArrowRightIcon,
 } from "@heroicons/vue/24/outline";
 
 let open = false;
 
-const network = [
+const menus = [
   {
-    label: "Explorer",
+    label: "Developers",
     nav: [
-      { label: "Subscan", href: "https://astar.subscan.io/" },
-      { label: "Blockscout", href: "https://blockscout.com/astar/" },
+      {
+        label: "",
+        nav: [{ label: "Get Started", href: i18n + "/developers" }],
+      },
+      {
+        label: "Developer Support",
+        nav: [
+          {
+            label: "Build2Earn",
+            href: "https://docs.astar.network/docs/dapp-staking/",
+          },
+          { label: "ink!ubator", href: "https://use.ink/ubator/" },
+        ],
+      },
+      {
+        label: "Learn",
+        nav: [
+          {
+            label: "Documentaion",
+            href: "https://docs.astar.network/",
+          },
+          // {
+          //   label: "Asstar University",
+          //   href: i18n + "/university",
+          // },
+        ],
+      },
     ],
   },
   {
-    label: "Status",
+    label: "Network",
     nav: [
       {
-        label: "DApp Staking",
-        href: "https://portal.astar.network/#/astar/dapp-staking/discover",
+        label: "Explorer",
+        nav: [
+          { label: "Subscan", href: "https://astar.subscan.io/" },
+          { label: "Blockscout", href: "https://blockscout.com/astar/" },
+        ],
       },
-      { label: "DeFi TVL", href: "https://defillama.com/chain/Astar" },
       {
-        label: "Applications",
-        href: "https://dappradar.com/rankings/protocol/astar",
+        label: "Status",
+        nav: [
+          {
+            label: "DApp Staking",
+            href: "https://portal.astar.network/#/astar/dapp-staking/discover",
+          },
+          { label: "DeFi TVL", href: "https://defillama.com/chain/Astar" },
+          {
+            label: "Applications",
+            href: "https://dappradar.com/rankings/protocol/astar",
+          },
+        ],
+      },
+      {
+        label: "Infrastructure",
+        nav: [
+          {
+            label: "Shiden Network",
+            href: "https://shiden.astar.network",
+          },
+          {
+            label: "Alchemy",
+            href: "https://www.alchemy.com/astar",
+          },
+          {
+            label: "Blockdeamon",
+            href: "https://blockdaemon.com/protocols/astar/",
+          },
+          {
+            label: "BlastAPI",
+            href: "https://blastapi.io/",
+          },
+          {
+            label: "OnFinality",
+            href: "https://www.onfinality.io/marketplace/astar",
+          },
+        ],
       },
     ],
   },
   {
-    label: "Infrastructure",
+    label: "Community",
     nav: [
       {
-        label: "Shiden Network",
-        href: "https://shiden.astar.network",
+        label: "",
+        nav: [
+          { label: "Community Hub", href: i18n + "/community" },
+          { label: "Ecosystem", href: i18n + "/community/ecosystem" },
+        ],
       },
       {
-        label: "Alchemy",
-        href: "https://www.alchemy.com/astar",
+        label: "What's on",
+        nav: [{ label: "Blog", href: i18n + "/blog" }],
       },
       {
-        label: "Blockdeamon",
-        href: "https://blockdaemon.com/protocols/astar/",
+        label: "Getting Involved",
+        nav: [
+          {
+            label: "Ambassador Program",
+            href: "https://github.com/AstarNetwork/growth-program",
+          },
+          {
+            label: "Astar Space Lab",
+            href: "https://astarnetwork.notion.site/Astar-SpaceLabs-bee19d9d13ab41ba8d113347ae56448f",
+          },
+          { label: "Community Forum", href: "https://forum.astar.network/" },
+        ],
       },
+    ],
+  },
+  {
+    label: "About",
+    nav: [
       {
-        label: "BlastAPI",
-        href: "https://blastapi.io/",
-      },
-      {
-        label: "OnFinality",
-        href: "https://www.onfinality.io/marketplace/astar",
+        label: "",
+        nav: [
+          { label: "2023 Starmap", href: i18n + "/starmap" },
+          { label: "Astar Japan Lab", href: i18n + "/japan" },
+          // {
+          //   label: "Jobs",
+          //   href: "https://wellfound.com/company/astar-network",
+          // },
+          { label: "Contact Us", href: i18n + "/contact" },
+        ],
       },
     ],
   },
 ];
+
+const network = [];
 </script>
 
-<style lang="postcss" scoped>
-.nav-item {
-  @apply text-white hover:text-space-cyan-light font-medium transition text-tiny xl:text-base;
-}
-</style>
+<style lang="postcss" scoped></style>
