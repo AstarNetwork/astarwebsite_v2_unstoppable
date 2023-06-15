@@ -31,6 +31,10 @@
       "wasm": {
         "title": "Wasm on Astar!",
         "description": "We have enabled ink! smart contracts on Astar Network, making us the first parachain to support a stable Wasm environment. Software developers can now use Rust programming to build their projects and ideas on Astar. \n\nWebAssembly is important for our blockchain because it provides a portable and developer-friendly environment for running code, which improves the performance, security, and interoperability of the applications built on Astar."
+      },
+      "vision": {
+        "title": "Astar 2.0",
+        "description": "Astar Network has established itself as the leading smart contract hub on Polkadot, with a strong presence in the Japanese market. Now, we are proud to present Astar 2.0, the next big milestone in our journey.\n\nAstar 2.0 is built upon a clear long-term direction. We have defined our mission to empower billions of individuals and enterprises by harnessing the potential of Web3. Guided by our core values and technology pillars, we aim to create a world where decentralized systems empower users to take control of their data, and privacy, and empower local communities, on and offline, to come together. Astar 2.0 gives developers the tools to build toward a better future web for all."
       }
     },
     "expansion": {

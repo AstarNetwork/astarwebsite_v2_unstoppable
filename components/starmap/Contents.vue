@@ -63,7 +63,11 @@
                       <NuxtLink
                         v-if="discoveries[discoveryId]['href']"
                         :to="discoveries[discoveryId]['href']"
-                        target="_blank"
+                        :target="
+                          discoveries[discoveryId]['href'].includes('https')
+                            ? '_blank'
+                            : '_self'
+                        "
                         class="flex items-center transition text-space-cyan hover:underline hover:text-space-cyan-lighter mt-5 outline-none"
                       >
                         {{ $t("starmap.learn_more") }}
@@ -71,8 +75,12 @@
                           about {{ discoveries[discoveryId]["title"] }}
                         </span>
                         <ArrowTopRightOnSquareIcon
+                          v-if="
+                            discoveries[discoveryId]['href'].includes('https')
+                          "
                           class="w-5 h-5 stroke-2 ml-1"
                         />
+                        <span v-else class="ml-1">-></span>
                       </NuxtLink>
                     </div>
                     <div
@@ -212,6 +220,11 @@
                     {{ $t("starmap.growth.wasm.title") }}
                   </span>
                 </li>
+                <li>
+                  <span @click="clickAction('vision')" class="popup-link"
+                    >Astar 2.0</span
+                  >
+                </li>
                 <li>RMRK ink! NFT</li>
                 <li>
                   Swanky /
@@ -260,7 +273,7 @@
                   }}
                 </li>
                 <li>
-                  {{ locale === "ja" ? "トークンエコノミクス" : "Tokenomics" }}
+                  {{ locale === "ja" ? "トークノミクス" : "Tokenomics" }}
                 </li>
                 <li>
                   {{ locale === "ja" ? "XCMコントラクト" : "XCM Contracts" }}
@@ -333,6 +346,7 @@ interface Discovery {
 }
 
 const { t, locale } = useI18n();
+const i18n = locale.value === "ja" ? "/ja" : "";
 
 const discoveries: { [index: string]: Discovery } = {
   xvm: {
@@ -364,6 +378,12 @@ const discoveries: { [index: string]: Discovery } = {
     description: t("starmap.growth.wasm.description"),
     href: "https://medium.com/astar-network/wasm-launch-day-april-6-1efa94dba798",
     image: "wasm.webp",
+  },
+  vision: {
+    title: "Astar 2.0",
+    description: t("vision.intro"),
+    href: i18n + "/astar2",
+    image: "vision.webp",
   },
   comingSoon: {
     title: "Coming soon!",

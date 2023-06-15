@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="banner--hiring">
+      <!-- <div class="banner--hiring">
         <NuxtLink
           to="https://wellfound.com/company/astar-network"
           target="_blank"
@@ -10,7 +10,7 @@
           {{ $t("home.hiring") }}
           <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
         </NuxtLink>
-      </div>
+      </div> -->
       <div class="bg-black">
         <div class="absolute z-0 w-full h-screen flex items-center">
           <ScrollParallax :speed="0.25" class="mx-auto">
@@ -26,7 +26,7 @@
             </video>
           </ScrollParallax>
         </div>
-        <div class="space-gradient mix-blend-screen">
+        <div class="space-gradient before:hidden mix-blend-screen">
           <img
             class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
             src="/images/common/space-cloud.webp"
@@ -50,7 +50,7 @@
         </div>
       </div>
 
-      <HomeGateway />
+      <HomeFeaturedContents />
 
       <HomeBecomeAStar class="pt-32 sm:pt-64 pb-32 sm:pb-64" />
 

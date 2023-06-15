@@ -46,18 +46,23 @@
               <ul class="border-b border-gray-600">
                 <li>
                   <NuxtLink
-                    :to="localePath('/starmap')"
-                    class="text-white block border-t border-gray-600 px-6 py-5"
+                    :to="localePath('/astar2')"
+                    class="text-space-teal group hover:text-space-teal-lighter flex items-center border-t border-gray-600 px-6 py-5"
                   >
-                    2023 Starmap
+                    Astar 2.0
+                    <span
+                      class="bg-space-teal group-hover:bg-space-teal-lighter text-space-gray-dark text-[0.7rem] block px-2 rounded-sm ml-2"
+                    >
+                      New
+                    </span>
                   </NuxtLink>
                 </li>
-                <li>
+                <li v-for="menu in menus">
                   <Disclosure as="div" v-slot="{ open }">
                     <DisclosureButton
                       class="text-white border-t border-gray-600 px-6 py-5 w-full flex justify-between items-center"
                     >
-                      <span>Developers</span>
+                      <span>{{ menu.label }}</span>
                       <ChevronDownIcon
                         :class="[
                           open ? 'rotate-180 transform' : '',
@@ -66,53 +71,25 @@
                         aria-hidden="true"
                       />
                     </DisclosureButton>
-                    <DisclosurePanel as="div" class="px-10 pb-8 text-sm">
-                      <NuxtLink
-                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        :to="localePath('/developers')"
-                      >
-                        Get Started
-                        <ArrowRightIcon class="w-4 h-4 ml-2" />
-                      </NuxtLink>
-                      <NuxtLink
-                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        :to="localePath('/developers/university')"
-                      >
-                        University
-                        <ArrowRightIcon class="w-4 h-4 ml-2" />
-                      </NuxtLink>
-                    </DisclosurePanel>
-                  </Disclosure>
-                </li>
-                <li>
-                  <Disclosure as="div" v-slot="{ open }">
-                    <DisclosureButton
-                      class="text-white border-t border-gray-600 px-6 py-5 w-full flex justify-between items-center"
-                    >
-                      <span>Network</span>
-                      <ChevronDownIcon
-                        :class="[
-                          open ? 'rotate-180 transform' : '',
-                          'h-4 w-4 stroke-2',
-                        ]"
-                        aria-hidden="true"
-                      />
-                    </DisclosureButton>
-                    <DisclosurePanel as="div" class="px-10 pb-8 text-sm">
+                    <DisclosurePanel as="div" class="px-6 pb-8">
                       <ul class="space-y-8">
-                        <li v-for="item in network">
-                          <span class="uppercase block text-gray-400 mb-2">
-                            {{ item.label }}
+                        <li v-for="category in menu.nav">
+                          <span
+                            v-if="category.label !== ''"
+                            class="uppercase block text-gray-400 mb-2 text-xs"
+                          >
+                            {{ category.label }}
                           </span>
                           <ul class="space-y-2">
-                            <li v-for="nav in item.nav">
+                            <li v-for="menu in category.nav">
                               <NuxtLink
-                                class="flex items-center"
-                                :to="nav.href"
+                                class="flex items-center text-tiny"
+                                :to="menu.href"
                                 target="_blank"
                               >
-                                {{ nav.label }}
+                                {{ menu.label }}
                                 <ArrowTopRightOnSquareIcon
+                                  v-if="menu.href.includes('https')"
                                   class="w-4 h-4 stroke-2 ml-1"
                                 />
                               </NuxtLink>
@@ -122,53 +99,6 @@
                       </ul>
                     </DisclosurePanel>
                   </Disclosure>
-                </li>
-                <li>
-                  <Disclosure as="div" v-slot="{ open }">
-                    <DisclosureButton
-                      class="text-white border-t border-gray-600 px-6 py-5 w-full flex justify-between items-center"
-                    >
-                      <span>Community</span>
-                      <ChevronDownIcon
-                        :class="[
-                          open ? 'rotate-180 transform' : '',
-                          'h-4 w-4 stroke-2',
-                        ]"
-                        aria-hidden="true"
-                      />
-                    </DisclosureButton>
-                    <DisclosurePanel as="div" class="px-10 pb-8 text-sm">
-                      <NuxtLink
-                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        :to="localePath('/community')"
-                      >
-                        Overview
-                        <ArrowRightIcon class="w-4 h-4 ml-2" />
-                      </NuxtLink>
-                      <NuxtLink
-                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        :to="localePath('/community/ecosystem')"
-                      >
-                        Ecosystem
-                        <ArrowRightIcon class="w-4 h-4 ml-2" />
-                      </NuxtLink>
-                      <NuxtLink
-                        class="flex items-center py-2 text-white hover:underline transition hover:text-space-cyan-lighter whitespace-nowrap"
-                        :to="localePath('/blog')"
-                      >
-                        Blog
-                        <ArrowRightIcon class="w-4 h-4 ml-2" />
-                      </NuxtLink>
-                    </DisclosurePanel>
-                  </Disclosure>
-                </li>
-                <li>
-                  <NuxtLink
-                    :to="localePath('/japan')"
-                    class="text-white block border-t border-gray-600 px-6 py-5"
-                  >
-                    Japan Lab
-                  </NuxtLink>
                 </li>
               </ul>
               <div class="py-12 px-6">
@@ -195,14 +125,11 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 
-const { locale } = useI18n();
-
 import {
   XMarkIcon,
   Bars3Icon,
   ArrowTopRightOnSquareIcon,
   ChevronDownIcon,
-  ArrowRightIcon,
 } from "@heroicons/vue/24/outline";
 import {
   Popover,
@@ -213,18 +140,23 @@ import {
   DisclosurePanel,
 } from "@headlessui/vue";
 
-interface Network {
-  label: string;
-  nav: Array<Nav>;
-}
-
 interface Nav {
   label: string;
   href: string;
 }
 
+interface MenuCategory {
+  label: string;
+  nav: Array<Nav>;
+}
+
+interface Menu {
+  label: string;
+  nav: Array<MenuCategory>;
+}
+
 interface Props {
-  network: Array<Network>;
+  menus: Array<Menu>;
 }
 
 const props = defineProps<Props>();
