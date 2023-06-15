@@ -211,7 +211,7 @@ const visions: { [index: string]: Vision } = {
     description: t("vision.link"),
   },
   supernova: {
-    title: "Incoming",
+    title: "Supernova",
     description: t("vision.supernova"),
   },
 };
