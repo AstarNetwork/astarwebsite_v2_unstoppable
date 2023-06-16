@@ -21,6 +21,7 @@
               :alt="item.title"
               width="460"
               height="370"
+              data-not-lazy
             />
           </div>
           <div class="px-6 lg:px-7 pb-12">

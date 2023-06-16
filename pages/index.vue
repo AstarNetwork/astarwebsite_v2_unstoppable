@@ -70,6 +70,7 @@
             alt=""
             width="1728"
             height="290"
+            data-not-lazy
           />
           <img
             class="w-full"
@@ -77,6 +78,7 @@
             alt=""
             width="1728"
             height="220"
+            data-not-lazy
           />
         </div>
       </div>
