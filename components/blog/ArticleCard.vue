@@ -9,6 +9,7 @@
         :src="post.image"
         :alt="post.title"
         class="object-cover w-full h-[240px] group-hover:brightness-110"
+        data-not-lazy
       />
       <div class="p-4 sm:p-5 pb-8 sm:pb-12">
         <time class="text-gray-400 text-tiny">{{ post.publishedDate }}</time>
