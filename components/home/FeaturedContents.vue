@@ -7,7 +7,7 @@
     >
       <img
         class="mx-auto -mt-24 sm:-mt-28 -mb-10 sm:-mb-16 w-full"
-        src="/images/home/featured-contents-vision.webp"
+        src="/images/home/featured-contents-vision.svg"
         alt=""
         data-not-lazy
       />
@@ -37,12 +37,13 @@
     </div>
     <div class="flex flex-col lg:w-1/2 space-y-4">
       <div
-        class="h-1/2 bg-space-gray rounded-2xl sm:bg-[url('/images/home/featured-contents-starmap.webp')] bg-no-repeat bg-right bg-contain sm:p-12 flex flex-col justify-center hover:brightness-110"
+        class="h-1/2 bg-space-gray rounded-2xl sm:bg-[url('/images/home/featured-contents-starmap.svg')] bg-no-repeat bg-right bg-contain sm:p-12 flex flex-col justify-center hover:brightness-110"
       >
         <img
           class="mx-auto w-full max-w-[240px] -mb-8 sm:hidden"
-          src="/images/home/featured-contents-starmap.webp"
+          src="/images/home/featured-contents-starmap.svg"
           alt="2023 Starmap"
+          data-not-lazy
         />
         <div
           class="sm:w-2/3 p-8 lg:p-0 text-tiny sm:text-base text-center sm:text-left"
@@ -60,12 +61,13 @@
         </div>
       </div>
       <div
-        class="h-1/2 bg-space-gray rounded-2xl sm:bg-[url('/images/home/featured-contents-japan.webp')] bg-no-repeat bg-left bg-contain sm:p-12 flex flex-col justify-center items-end hover:brightness-110"
+        class="h-1/2 bg-space-gray rounded-2xl sm:bg-[url('/images/home/featured-contents-japan.svg')] bg-no-repeat bg-left bg-contain sm:p-12 flex flex-col justify-center items-end hover:brightness-110"
       >
         <img
           class="mx-auto w-full max-w-[240px] -mb-8 sm:hidden"
-          src="/images/home/featured-contents-japan.webp"
+          src="/images/home/featured-contents-japan.svg"
           alt="Astar Japan Lab"
+          data-not-lazy
         />
         <div
           class="sm:w-2/3 p-8 lg:p-0 text-tiny sm:text-base text-center sm:text-right"
