@@ -23,5 +23,5 @@ jobs:
           script: |
             cd ssr/astarwebsite_v2/
             npm ci
-            npm run build
+            npm run build &&
             sudo systemctl restart astarweb.service
