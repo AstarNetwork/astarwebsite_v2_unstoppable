@@ -202,9 +202,9 @@ const visions: { [index: string]: Vision } = {
     title: "Astar Foundation",
     description: t("vision.foundation"),
   },
-  dao: {
-    title: "Astar DAO",
-    description: t("vision.dao"),
+  governance: {
+    title: "Astar Governance",
+    description: t("vision.governance"),
   },
   link: {
     title: "Astar Link",
