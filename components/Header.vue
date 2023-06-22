@@ -169,7 +169,7 @@ const menus = [
         label: "Learn",
         nav: [
           {
-            label: "Documentaion",
+            label: "Documentation",
             href: "https://docs.astar.network/",
           },
           // {
