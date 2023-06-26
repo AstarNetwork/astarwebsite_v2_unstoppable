@@ -28,7 +28,7 @@
           </NuxtLink>
 
           <div class="-my-2 -mr-2 lg:hidden">
-            <MobileNav :network="network" :menus="menus" />
+            <MobileNav :menus="menus" />
           </div>
 
           <div class="hidden lg:flex lg:items-center">
@@ -172,10 +172,10 @@ const menus = [
             label: "Documentation",
             href: "https://docs.astar.network/",
           },
-          // {
-          //   label: "Asstar University",
-          //   href: i18n + "/university",
-          // },
+          {
+            label: "Asstar University",
+            href: i18n + "/developers/university",
+          },
         ],
       },
     ],

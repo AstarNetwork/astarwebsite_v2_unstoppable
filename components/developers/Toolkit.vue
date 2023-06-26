@@ -10,7 +10,7 @@
       />
     </div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 pt-40">
-      <h2 class="title text-center mb-8 sm:mb-12">
+      <h2 class="title text-center mb-8 sm:mb-12 whitespace-pre-wrap">
         <span>{{ $t("developers.toolkit.title") }}</span>
       </h2>
       <p class="text-center mb-12 sm:mb-28">

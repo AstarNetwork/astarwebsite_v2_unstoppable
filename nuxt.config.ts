@@ -75,6 +75,7 @@ export default defineNuxtConfig({
           "en-ecosystem.json",
           "en-starmap.json",
           "en-vision.json",
+          "en-university.json",
         ],
       },
       {
@@ -94,6 +95,7 @@ export default defineNuxtConfig({
           "ja-ecosystem.json",
           "ja-starmap.json",
           "ja-vision.json",
+          "ja-university.json",
         ],
       },
     ],

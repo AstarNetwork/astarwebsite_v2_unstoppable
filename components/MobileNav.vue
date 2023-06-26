@@ -140,11 +140,6 @@ import {
   DisclosurePanel,
 } from "@headlessui/vue";
 
-interface Network {
-  label: string;
-  nav: Array<Nav>;
-}
-
 interface Nav {
   label: string;
   href: string;
@@ -161,7 +156,6 @@ interface Menu {
 }
 
 interface Props {
-  network: Array<Network>;
   menus: Array<Menu>;
 }
 
