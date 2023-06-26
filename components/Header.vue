@@ -169,7 +169,7 @@ const menus = [
         label: "Learn",
         nav: [
           {
-            label: "Documentaion",
+            label: "Documentation",
             href: "https://docs.astar.network/",
           },
           {
@@ -222,6 +222,10 @@ const menus = [
           {
             label: "BlastAPI",
             href: "https://blastapi.io/",
+          },
+          {
+            label: "Dwellir",
+            href: "https://www.dwellir.com/networks/astar",
           },
           {
             label: "OnFinality",

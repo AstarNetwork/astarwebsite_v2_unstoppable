@@ -56,7 +56,7 @@ const query = gql`
   query getAllData {
     projects(
       pagination: { page: 1, pageSize: 1000 }
-      filters: { project_categories: { id: { eq: 15 } } }
+      filters: { project_categories: { id: { eq: 15 } }, id: { ne: 300 } }
     ) {
       data {
         attributes {
@@ -94,7 +94,7 @@ const query = gql`
           name
           projects(
             pagination: { page: 1, pageSize: 1000 }
-            filters: { project_categories: { id: { eq: 15 } } }
+            filters: { project_categories: { id: { eq: 15 } }, id: { ne: 300 } }
           ) {
             data {
               id
@@ -129,6 +129,8 @@ const { data } = await useAsyncQuery({ query, clientId: "community" });
 
 let projects = [];
 let categories = [];
-projects = data.value.projects.data;
-categories = data.value.projectCategories.data;
+if (data.value !== null) {
+  projects = data.value.projects.data;
+  categories = data.value.projectCategories.data;
+}
 </script>

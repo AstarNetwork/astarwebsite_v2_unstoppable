@@ -7,6 +7,7 @@
         alt="Welcome to the leading multichain smart contracts platform"
         width="450"
         height="750"
+        data-not-lazy
       />
     </div>
     <div class="2xl:flex px-4 sm:px-6 lg:mr-6">

@@ -14,6 +14,7 @@
           class="mx-auto"
           width="614"
           height="382"
+          data-not-lazy
         />
       </div>
       <div :class="index % 2 === 0 && 'sm:order-1'">

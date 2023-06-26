@@ -101,8 +101,13 @@ import gql from "graphql-tag";
 
 const query = gql`
   query getAllData {
-    projects(pagination: { page: 1, pageSize: 1000 }, sort: "name") {
+    projects(
+      pagination: { page: 1, pageSize: 1000 }
+      sort: "name"
+      filters: { id: { ne: 300 } }
+    ) {
       data {
+        id
         attributes {
           name
           website
@@ -130,7 +135,11 @@ const query = gql`
         id
         attributes {
           name
-          projects(pagination: { page: 1, pageSize: 1000 }, sort: "name") {
+          projects(
+            pagination: { page: 1, pageSize: 1000 }
+            sort: "name"
+            filters: { id: { ne: 300 } }
+          ) {
             data {
               id
               attributes {
@@ -164,8 +173,10 @@ const { data } = await useAsyncQuery({ query, clientId: "community" });
 
 let projects = [];
 let categories = [];
-projects = data.value.projects.data;
-categories = data.value.projectCategories.data;
+if (data.value !== null) {
+  projects = data.value.projects.data;
+  categories = data.value.projectCategories.data;
+}
 
 const route = useRoute();
 const { t } = useI18n();
