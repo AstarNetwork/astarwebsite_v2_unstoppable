@@ -13,7 +13,7 @@
       },
       "self_paced": {
         "title": "Self-Paced Study",
-        "description": "Complete your course with flexible study, over for 9 weeks."
+        "description": "Complete your course with flexible study, over for 8 weeks."
       },
       "potential": {
         "title": "Unlock Your Potential",
@@ -34,6 +34,10 @@
       "module3": {
         "title": "Interoperability and Infrastructure",
         "description": "Astar projects and smart contracts communicate by exchanging messages across networks and environments. Learn how Astar securely communicates with XCM and enables multilingual smart contracts through XVM messaging. You'll build a smart contract from scratch."
+      },
+      "bonus": {
+        "title": "Infrastructure and Tooling",
+        "description": "Learn about indexers, block explorers, node providers, oracles and SDKs to build your smart contracts and dApps such as Alchemy, Thirdweb, Privy and more!"
       }
     },
     "reason": "Why learn about Astar?",
@@ -65,7 +69,7 @@
       },
       "length": {
         "q": "How long is the program?",
-        "a": "The program runs 9 weeks, beginning June 18. Modules are flexible and self-paced. Deadline to apply is June 11."
+        "a": "The program runs 8 weeks, beginning June 18. Modules are flexible and self-paced. Deadline to apply is July 09."
       },
       "cost": {
         "q": "How much does it cost?",
@@ -73,7 +77,7 @@
       },
       "place": {
         "q": "Where does it take place?",
-        "a": "This course is online only. You will complete challenging modules at your own pace and always have access to coaching with our developer team. At the end of the course we'll have a private graduation ceremony to celebrate your achievement and meet the Astar team."
+        "a": "This course is online only. You will complete challenging modules at your own pace and always have access to coaching with our developer team. At the end of the course we'll have a group graduation ceremony to celebrate your achievement and meet the Astar team."
       }
     },
     "cta": {

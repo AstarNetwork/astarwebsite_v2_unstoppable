@@ -12,9 +12,12 @@
       >
         <div class="bg-space-gray rounded-2xl p-8 sm:p-10 flex-1 ml-4 sm:ml-10">
           <p class="gradient-text font-medium text-lg">
-            <span
-              >{{ $t("university.curriculum.module") }} {{ index + 1 }}</span
-            >
+            <span v-if="index === 3">
+              {{ locale === "ja" ? "ボーナスモジュール" : "Bonus Module" }}
+            </span>
+            <span v-else>
+              {{ $t("university.curriculum.module") }} {{ index + 1 }}
+            </span>
           </p>
           <h3 class="font-bold text-xl sm:text-2xl mb-2 leading-tight">
             {{ item.title }}
@@ -27,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-const { t } = useI18n();
+const { t, locale } = useI18n();
 
 const curriculum = [
   {
@@ -41,6 +44,10 @@ const curriculum = [
   {
     title: t("university.curriculum.module3.title"),
     description: t("university.curriculum.module3.description"),
+  },
+  {
+    title: t("university.curriculum.bonus.title"),
+    description: t("university.curriculum.bonus.description"),
   },
 ];
 </script>
