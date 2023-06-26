@@ -83,8 +83,10 @@ import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 const application = "https://forms.gle/4fnF1fWS3GRdDxtL6";
 
 const route = useRoute();
+const { t } = useI18n();
 import { meta } from "@/content/meta";
-const seoTitle = `Astar University | ${meta.siteName} - ${meta.tagline}`;
+const seoTitle = `Astar University | ${meta.siteName} - ${t("meta.tagline")}`;
+
 const seoDescription =
   "Gain valuable web3 programming skills. Hands-on training to put you on the fast track to a web3 career. Rust. Solidity. And Polkadot.";
 const seoUrl = `${meta.url}${route.fullPath}`;
