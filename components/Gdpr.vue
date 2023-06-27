@@ -1,10 +1,12 @@
 <template>
   <div
+    class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50"
     v-if="!gdpr_accept"
-    class="bg-white bg-opacity-95 text-space-gray-dark bottom-0 left-0 w-full fixed z-50 border-t border-gray-300 pt-8 sm:pt-12 pb-12"
   >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 sm:flex items-center">
-      <div class="sm:mr-4">
+    <div
+      class="pointer-events-auto max-w-xl rounded-xl bg-white/95 p-6 shadow-lg ring-1 ring-gray-900/5"
+    >
+      <p class="text-sm leading-6 text-gray-900">
         Our website uses cookies to enhance site navigation and analyze site
         usage. Please let us know you agree to all of our cookies. You can find
         out more on our
@@ -16,19 +18,21 @@
           Privacy Policy
         </NuxtLink>
         page.
-      </div>
-      <div class="text-center mt-4 sm:mt-0">
-        <Button class="whitespace-nowrap" size="lg" @click="acceptCookies">
+      </p>
+      <div class="mt-4 flex items-center gap-x-5">
+        <button
+          @click="acceptCookies"
+          type="button"
+          class="rounded-md bg-space-gray px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-space-gray"
+        >
           Accept Cookies
-        </Button>
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-
 const gdpr_accept = ref(true);
 
 if (typeof window !== "undefined") {
