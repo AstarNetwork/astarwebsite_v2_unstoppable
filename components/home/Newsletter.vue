@@ -53,15 +53,12 @@
             leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
             <DialogPanel
-              class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark shadow-xl transition-all sm:w-full sm:max-w-2xl"
+              class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark shadow-xl transition-all w-full sm:max-w-2xl"
             >
-              <div>
-                <iframe
-                  class="w-full h-[600px]"
-                  src="https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380"
-                />
-              </div>
-
+              <iframe
+                class="w-full h-[600px]"
+                src="https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380"
+              />
               <button
                 type="button"
                 class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
