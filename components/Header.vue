@@ -33,7 +33,7 @@
 
           <div class="hidden lg:flex lg:items-center">
             <nav class="flex items-center space-x-4 xl:space-x-8">
-              <!-- <NuxtLink
+              <NuxtLink
                 :to="localePath('/astar2')"
                 class="text-space-teal group hover:text-space-teal-lighter font-medium transition text-tiny xl:text-base flex items-center"
               >
@@ -43,7 +43,7 @@
                 >
                   New
                 </span>
-              </NuxtLink> -->
+              </NuxtLink>
 
               <template v-for="category in menus">
                 <Popover v-slot="{ open }" class="relative">
@@ -111,16 +111,13 @@
               </template>
             </nav>
             <div class="ml-4 xl:ml-6">
-              <!-- <Button
+              <Button
                 variant="outlined"
                 href="https://portal.astar.network/"
                 target="_blank"
               >
                 {{ $t("home.hero.app") }}
                 <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
-              </Button> -->
-              <Button variant="outlined" :href="i18n + '/astar2'">
-                Astar 2.0
               </Button>
             </div>
           </div>

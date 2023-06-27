@@ -44,7 +44,7 @@
             </div>
             <nav class="">
               <ul class="border-b border-gray-600">
-                <!-- <li>
+                <li>
                   <NuxtLink
                     :to="localePath('/astar2')"
                     class="text-space-teal group hover:text-space-teal-lighter flex items-center border-t border-gray-600 px-6 py-5"
@@ -56,7 +56,7 @@
                       New
                     </span>
                   </NuxtLink>
-                </li> -->
+                </li>
                 <li v-for="menu in menus">
                   <Disclosure as="div" v-slot="{ open }">
                     <DisclosureButton
@@ -102,7 +102,7 @@
                 </li>
               </ul>
               <div class="py-12 px-6">
-                <!-- <Button
+                <Button
                   href="https://portal.astar.network/"
                   target="_blank"
                   size="lg"
@@ -110,9 +110,6 @@
                 >
                   {{ $t("home.hero.app") }}
                   <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
-                </Button> -->
-                <Button :href="i18n + '/astar2'" size="lg" class="w-full">
-                  Astar 2.0
                 </Button>
               </div>
 
@@ -127,8 +124,6 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath();
-const { locale } = useI18n();
-const i18n = locale.value === "ja" ? "/ja" : "";
 
 import {
   XMarkIcon,
