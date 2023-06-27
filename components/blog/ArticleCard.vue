@@ -2,7 +2,7 @@
   <li>
     <!-- post.slug is the slug of the article -->
     <NuxtLink
-      :href="i18n + '/blog/' + post.slug"
+      :href="'/blog/' + post.slug"
       class="block rounded overflow-hidden bg-space-gray group hover:bg-space-gray-lighter transition h-full"
     >
       <img
