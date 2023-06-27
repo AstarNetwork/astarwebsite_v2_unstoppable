@@ -28,11 +28,10 @@
         />
         <CommunityHero />
       </div>
-      <CommunityLinks class="pb-28 sm:pb-44" />
-      <CommunityWayfinding class="pb-28 sm:pb-64" />
-      <CommunitySpaceLab class="pb-32 sm:pb-64" />
-      <CommunityVideos class="pb-32 sm:pb-64" />
-      <CommunityNews class="pb-24" />
+      <CommunityOnlineCommunity class="pb-28 sm:pb-64" />
+      <CommunityBuilders class="pb-28 sm:pb-64" />
+      <CommunityGrants class="pb-28 sm:pb-64" />
+      <CommunityAmbassador class="pb-28 sm:pb-64" />
     </template>
     <template #earth>
       <Footer />
