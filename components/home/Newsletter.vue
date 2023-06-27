@@ -78,14 +78,6 @@
 </template>
 
 <script setup lang="ts">
-useHead({
-  script: [
-    {
-      src: "https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380",
-    },
-  ],
-});
-
 import {
   Dialog,
   DialogPanel,
