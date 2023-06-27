@@ -60,8 +60,12 @@
       />
     </div>
     <p class="text-sm leading-6 text-space-gray-dark">
-      <a href="#" class="font-semibold block">
-        Notification banner
+      <a
+        :href="locale === 'ja' ? notification.ja.url : notification.en.url"
+        :target="notification.external_link ? '_blank' : '_self'"
+        class="font-semibold block"
+      >
+        {{ locale === "ja" ? notification.ja.text : notification.en.text }}
         <span aria-hidden="true" class="ml-1">&rarr;</span>
       </a>
     </p>
@@ -80,6 +84,8 @@
 
 <script setup>
 import { XMarkIcon } from "@heroicons/vue/20/solid";
-
+import { notification } from "@/content/notification";
+const { locale } = useI18n();
 const isVisible = ref(true);
+console.log(notification);
 </script>
