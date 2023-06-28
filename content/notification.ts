@@ -1,11 +1,11 @@
 export const notification = {
   external_link: true,
   en: {
-    text: "notification banner",
-    url: "https://example-en.com",
+    text: "Startale and Sony Network Communications Form Capital Alliance",
+    url: "https://startale.org/blog/startale-and-sony-network-communications-form-capital-38815",
   },
   ja: {
-    text: "お知らせバナー",
-    url: "https://example-ja.com",
+    text: "スターテイル・ラボとソニーネットワークコミュニケーションズが資本提携",
+    url: "https://startale.org/blog/38814",
   },
 };
