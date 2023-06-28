@@ -11,7 +11,7 @@
           <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
         </NuxtLink>
       </div> -->
-      <div class="bg-black">
+      <div class="bg-black relative">
         <div class="absolute z-0 w-full h-screen flex items-center">
           <ScrollParallax :speed="0.25" class="mx-auto">
             <video
