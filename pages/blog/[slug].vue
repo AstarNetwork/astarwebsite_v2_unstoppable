@@ -177,7 +177,6 @@ const posts = dataRelated.data.value.posts.map(
     };
   }
 );
-console.log(posts);
 
 import { meta } from "@/content/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
