@@ -87,5 +87,4 @@ import { XMarkIcon } from "@heroicons/vue/20/solid";
 import { notification } from "@/content/notification";
 const { locale } = useI18n();
 const isVisible = ref(true);
-console.log(notification);
 </script>
