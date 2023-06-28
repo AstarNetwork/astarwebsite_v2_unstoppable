@@ -68,7 +68,7 @@
 
       <HomeNewsletter class="mb-36" />
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36">
         <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
           {{ $t("blog.related") }}
         </h2>
@@ -146,7 +146,7 @@ const orConditions = post.tagsOriginal
 
 const querySpace = gql`
   query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC, limit: 6) {
       publishedDate: createdOnDay
       title
       href: canonical
@@ -177,6 +177,7 @@ const posts = dataRelated.data.value.posts.map(
     };
   }
 );
+console.log(posts);
 
 import { meta } from "@/content/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
