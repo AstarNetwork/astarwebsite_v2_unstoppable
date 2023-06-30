@@ -29,7 +29,12 @@
             documentation to dive in yourself.
           </p>
           <div class="text-center">
-            <Button href="/community/ecosystem" class="w-72" size="lg">
+            <Button
+              :href="item.button.href"
+              :target="item.button.href.includes('https') ? '_blank' : '_self'"
+              class="w-72"
+              size="lg"
+            >
               {{ item.button.label }}
               <ArrowTopRightOnSquareIcon
                 v-if="item.button.href.includes('https')"
@@ -40,7 +45,8 @@
           </div>
           <div v-if="item.text_link" class="text-center mt-3">
             <NuxtLink
-              to="#"
+              :to="item.text_link.href"
+              target="_blank"
               class="text-space-cyan hover:underline hover:text-space-cyan-lighter"
             >
               {{ item.text_link.label }}
@@ -68,7 +74,7 @@ const builders = [
       "Take a look at who's already building on Astar Network, or visit the documentation to dive in yourself.",
     button: {
       label: "Ecosystem",
-      href: "/ecosystem",
+      href: "/community/ecosystem",
     },
     text_link: {
       label: "Go to documentation",
@@ -87,5 +93,3 @@ const builders = [
   },
 ];
 </script>
-
-<style lang="postcss" scoped></style>

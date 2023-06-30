@@ -32,7 +32,7 @@
             href="/developers/university"
             class="w-72"
           >
-            Astar University
+            Astar University ->
           </Button>
         </div>
       </div>
@@ -47,6 +47,7 @@
             <h4>
               <NuxtLink
                 :to="item.href"
+                target="_blank"
                 class="text-space-cyan hover:underline hover:text-space-cyan-lighter font-semibold text-lg lg:text-xl"
               >
                 {{ item.title }} <span class="whitespace-nowrap">-></span>
@@ -66,25 +67,25 @@ const docs = [
     title: "Build",
     description:
       "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.",
-    href: "",
+    href: "https://docs.astar.network/docs/build/",
   },
   {
     title: "Run A Node",
     description:
       "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.",
-    href: "",
+    href: "https://docs.astar.network/docs/nodes/",
   },
   {
     title: "Learn Cross-Chain Message (XCM)",
     description:
       "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.",
-    href: "",
+    href: "https://docs.astar.network/docs/xcm/",
   },
   {
     title: "Integrate Toolings",
     description:
       "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.",
-    href: "",
+    href: "https://docs.astar.network/docs/integrations/",
   },
 ];
 </script>

@@ -25,12 +25,13 @@
         </p>
         <div class="text-center">
           <Button
-            href="https://use.ink/ubator/"
+            href="https://docs.astar.network/docs/dapp-staking/"
             size="lg"
             target="_blank"
-            class="bg-black rounded-xl p-4 w-72 inline-flex justify-center text-lg hover:bg-gray-900"
+            class="w-72"
           >
             Build2Earn
+            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
           </Button>
         </div>
       </div>
@@ -52,12 +53,17 @@
           <NuxtLink
             to="https://use.ink/ubator/"
             target="_blank"
-            class="bg-black rounded-xl p-4 w-72 inline-flex justify-center text-lg hover:bg-gray-900"
+            class="bg-black rounded-xl p-4 w-72 inline-flex justify-center items-center text-lg hover:bg-gray-900"
           >
             ink!ubator
+            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
           </NuxtLink>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+</script>

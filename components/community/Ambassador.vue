@@ -25,12 +25,17 @@
             variant="outlined"
             size="lg"
             href="https://github.com/AstarNetwork/growth-program"
-            class="w-72"
+            target="_blank"
           >
             Ambassador Program
+            <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
           </Button>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+</script>
