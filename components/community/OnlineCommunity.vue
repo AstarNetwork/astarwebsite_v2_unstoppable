@@ -10,7 +10,7 @@
         Join the Astar community to build without limits and unlock the
         blockchain frontier, today.
       </p>
-      <h3 class="text-white font-bold text-4xl mb-6">
+      <h3 class="text-white font-bold text-3xl sm:text-4xl mb-6 leading-tight">
         Join our online community
       </h3>
       <p class="mb-16">
@@ -19,7 +19,7 @@
       </p>
     </div>
     <ul
-      class="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-7 gap-2 sm:gap-3"
+      class="max-w-6xl mx-auto grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-7 gap-2 sm:gap-3"
     >
       <li v-for="item in social">
         <NuxtLink
@@ -33,7 +33,9 @@
             :class="item.color"
             aria-hidden="true"
           />
-          <h3 class="font-medium mt-1 sm:mt-2">{{ item.name }}</h3>
+          <h3 class="font-medium mt-1 sm:mt-2 text-tiny sm:text-base">
+            {{ item.name }}
+          </h3>
         </NuxtLink>
       </li>
     </ul>
@@ -48,8 +50,6 @@ const Reddit = resolveComponent("IconReddit");
 const Github = resolveComponent("IconGithub");
 const Youtube = resolveComponent("IconYoutube");
 const Comments = resolveComponent("IconComments");
-
-const { t } = useI18n();
 
 const social = [
   {

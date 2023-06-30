@@ -11,7 +11,7 @@
           data-not-lazy
         />
         <img
-          class="absolute z-[2] right-0 -bottom-4 lg:bottom-4 portrait:max-h-[50vh] landscape:max-h-[80vh] w-auto"
+          class="absolute z-[2] right-0 bottom-4 portrait:max-h-[50vh] landscape:max-h-[80vh] w-auto"
           src="/images/community/hero.svg"
           alt="Community"
           width="1106"
@@ -28,10 +28,10 @@
         />
         <CommunityHero />
       </div>
-      <CommunityOnlineCommunity class="pb-28 sm:pb-64" />
+      <CommunityOnlineCommunity class="pb-28 sm:pb-64 pt-12" />
       <CommunityBuilders class="pb-28 sm:pb-64" />
-      <CommunityGrants class="pb-28 sm:pb-64" />
-      <CommunityAmbassador class="pb-28 sm:pb-64" />
+      <CommunityGrants class="pb-28 sm:pb-40" />
+      <CommunityAmbassador class="pb-28 sm:pb-40" />
     </template>
     <template #earth>
       <Footer />

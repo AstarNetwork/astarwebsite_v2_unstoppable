@@ -1,9 +1,11 @@
 <template>
-  <div class="px-4 sm:px-6 relative z-10">
+  <section class="px-4 sm:px-6 relative z-10">
     <h2 class="max-w-4xl mx-auto title text-center mb-8 sm:mb-12">
       <span>Build dApps on the Astar Network</span>
     </h2>
-    <div class="max-w-7xl mx-auto grid grid-cols-2 gap-12 pt-24">
+    <div
+      class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 pt-6 lg:pt-24"
+    >
       <div
         v-for="item in builders"
         class="border border-white/30 rounded-3xl p-6"
@@ -11,21 +13,23 @@
         <img
           :src="'/images/community/' + item.image"
           :alt="item.title"
-          class="mx-auto -mt-24"
+          class="mx-auto -mt-12 lg:-mt-24"
           width="600"
           height="300"
           data-not-lazy
         />
-        <div class="p-12 pt-4">
-          <h3 class="text-white font-bold text-center text-4xl mb-4">
+        <div class="sm:p-12 pt-4">
+          <h3
+            class="text-white font-bold text-center text-3xl sm:text-4xl mb-4 leading-tight"
+          >
             {{ item.title }}
           </h3>
           <p class="mb-8">
-            Take a look at who’s already building on Astar Network, or visit the
+            Take a look at who's already building on Astar Network, or visit the
             documentation to dive in yourself.
           </p>
           <div class="text-center">
-            <Button href="/community/ecosystem" class="w-[280px]">
+            <Button href="/community/ecosystem" class="w-72" size="lg">
               {{ item.button.label }}
               <ArrowTopRightOnSquareIcon
                 v-if="item.button.href.includes('https')"
@@ -50,7 +54,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup lang="ts">

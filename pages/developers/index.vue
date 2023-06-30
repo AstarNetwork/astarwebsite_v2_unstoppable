@@ -30,7 +30,9 @@
         />
         <DevelopersHero />
       </div>
-      <DevelopersStart class="pb-20 sm:pb-64" />
+      <DevelopersBuild class="pb-20 sm:pb-64" />
+      <DevelopersSupport class="pb-20 sm:pb-64" />
+      <DevelopersLearn class="pb-20 sm:pb-64" />
       <DevelopersAdvantages class="pb-12" />
       <DevelopersMultichain class="pb-28 sm:pb-44" />
       <DevelopersToolkit class="pb-32 sm:pb-64" />

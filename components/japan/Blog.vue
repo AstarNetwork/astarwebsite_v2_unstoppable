@@ -1,11 +1,18 @@
 <template>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
-    <h2 class="title text-center mb-12 sm:mb-16"><span>Astar Blog</span></h2>
+  <div
+    v-if="posts.length > 0"
+    class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10"
+  >
+    <h2 class="title text-center mb-12 sm:mb-16">
+      <span>Astar Japan Blog</span>
+    </h2>
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
       <BlogArticleCard v-for="post in posts" :post="post" />
     </ul>
     <div class="text-center mt-12 sm:mt-20">
-      <Button size="lg" :href="localePath('/blog')">Astar Blog -></Button>
+      <Button size="lg" :href="localePath('/blog/tag/japan')">
+        Astar Japan Blog ->
+      </Button>
     </div>
   </div>
 </template>
@@ -18,7 +25,7 @@ const { locale } = useI18n();
 const astarSpace = locale.value === "ja" ? 11315 : 10802;
 const query = gql`
   query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" } }, orderBy: id_DESC, limit: 6) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "japan" }, orderBy: id_DESC, limit: 3) {
       publishedDate: createdOnDay
       title
       href: canonical
