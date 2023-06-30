@@ -173,7 +173,7 @@ const menus = [
             href: "https://docs.astar.network/",
           },
           {
-            label: "Asstar University",
+            label: "Astar University",
             href: i18n + "/developers/university",
           },
         ],

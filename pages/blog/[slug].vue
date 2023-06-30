@@ -68,7 +68,7 @@
 
       <HomeNewsletter class="mb-36" />
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36">
         <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
           {{ $t("blog.related") }}
         </h2>
@@ -146,7 +146,7 @@ const orConditions = post.tagsOriginal
 
 const querySpace = gql`
   query PostsByTag {
-    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, AND: { OR: [${orConditions}] }, slug_not_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC, limit: 6) {
       publishedDate: createdOnDay
       title
       href: canonical
@@ -226,7 +226,7 @@ definePageMeta({
 }
 
 .entry-content {
-  @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark tracking-wider prose-headings:font-bold prose-blockquote:font-normal prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:bg-white/5 prose-strong:font-medium;
+  @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:text-tiny lg:prose-blockquote:text-base prose-blockquote:bg-white/5 prose-strong:font-medium prose-em:text-white prose-img:mx-auto;
 }
 .entry-content p code {
   font-size: 0.9em;
@@ -235,6 +235,10 @@ definePageMeta({
 .entry-content p code::before,
 .entry-content p code::after {
   @apply hidden;
+}
+.entry-content ul li::marker,
+.entry-content ol li::marker {
+  @apply text-white;
 }
 /* .entry-content strong {
   background: linear-gradient(transparent 60%, #69275c 60%);

@@ -18,12 +18,12 @@
           size="lg"
           href="https://docs.astar.network/"
           target="_blank"
-          class="w-[280px] sm:w-auto"
+          class="w-[260px]"
         >
           {{ $t("home.hero.doc") }}
           <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
         </Button>
-        <Button
+        <!-- <Button
           variant="outlined"
           size="lg"
           href="https://portal.astar.network/"
@@ -32,6 +32,14 @@
         >
           {{ $t("home.hero.app") }}
           <ArrowTopRightOnSquareIcon class="w-6 h-6 ml-1 stroke-2" />
+        </Button> -->
+        <Button
+          variant="outlined"
+          size="lg"
+          :href="i18n + '/astar2'"
+          class="w-[260px]"
+        >
+          Astar 2.0 ->
         </Button>
       </div>
     </div>
@@ -40,4 +48,7 @@
 
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
+
+const { locale } = useI18n();
+const i18n = locale.value === "ja" ? "/ja" : "";
 </script>
