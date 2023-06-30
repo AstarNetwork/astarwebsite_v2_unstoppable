@@ -81,10 +81,10 @@
           </TabList>
           <TabPanels>
             <TabPanel class="tab-panel">
-              <CommunityLogoList :projects="projects" />
+              <EcosystemLogoList :projects="projects" />
             </TabPanel>
             <TabPanel class="tab-panel" v-for="item in categories">
-              <CommunityLogoList :projects="item.attributes.projects.data" />
+              <EcosystemLogoList :projects="item.attributes.projects.data" />
             </TabPanel>
           </TabPanels>
         </TabGroup>
