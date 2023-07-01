@@ -25,8 +25,7 @@
             {{ item.title }}
           </h3>
           <p class="mb-8">
-            Take a look at who's already building on Astar Network, or visit the
-            documentation to dive in yourself.
+            {{ item.description }}
           </p>
           <div class="text-center">
             <Button

@@ -16,9 +16,10 @@
           Become an Official Ambassador
         </h2>
         <p class="text-white mx-auto mb-8 sm:text-lg">
-          ink!ubator is a program funded by the Web3 Foundation's Bounty
-          Program. In partnership with Polkadot, Astar allows users to write
-          smart contracts with ink! across virtual machines.
+          We have created an open community program where every community member
+          can join and support the Astar ecosystem. You can collect points and
+          receive rewards through dApp staking with valid and useful
+          contributions.
         </p>
         <div class="text-center lg:text-left">
           <Button
