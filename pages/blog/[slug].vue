@@ -68,7 +68,10 @@
 
       <HomeNewsletter class="mb-36" />
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36">
+      <div
+        v-if="posts.length > 0"
+        class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mt-36"
+      >
         <h2 class="text-center text-3xl lg:text-4xl font-semibold mb-12">
           {{ $t("blog.related") }}
         </h2>
@@ -86,7 +89,7 @@
 </template>
 
 <script setup lang="ts">
-defineI18nRoute(false);
+// defineI18nRoute(false);
 
 import gql from "graphql-tag";
 import MarkdownIt from "markdown-it";
@@ -102,7 +105,8 @@ const i18n = locale.value === "ja" ? "/ja" : "";
 
 const query = gql`
   query PostsBySlug {
-    posts(where: { space: { id_eq: "${astarSpace}" }, slug_eq: "${slug}", hidden_eq: false }, orderBy: id_DESC) {
+    posts(where: { space: { id_eq: "10802" }, slug_eq: "${slug}", hidden_eq: false, OR: { space: { id_eq: "11315" }, slug_eq: "${slug}", hidden_eq: false } }, orderBy: id_DESC) {
+
       publishedDate: createdOnDay
       title
       href: canonical
