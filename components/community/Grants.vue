@@ -16,9 +16,11 @@
         </span>
       </h2>
       <p class="text-black mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
-        ink!ubator is a program funded by the Web3 Foundation's Bounty Program.
-        In partnership with Polkadot, Astar allows users to write smart
-        contracts with ink! across virtual machines.
+        ink!ubator, A game-changing program funded by Polkadot's Treasury Bounty
+        Program. ink!ubator fosters developer growth, ensures security audits,
+        enhances tooling, & launches high-impact products. The perfect platform
+        for innovation; pioneered by Astar - this initiative will enable &
+        empower projects looking to dive deeper into ink! and its capabilities.
       </p>
       <div class="text-center">
         <NuxtLink

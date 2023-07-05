@@ -70,7 +70,7 @@ const builders = [
     title: "Ecosystem",
     image: "builders-ecosystem.svg",
     description:
-      "Take a look at who's already building on Astar Network, or visit the documentation to dive in yourself.",
+      "Take a look at who’s already building on Astar Network, or visit the documentation to dive in yourself.",
     button: {
       label: "Ecosystem",
       href: "/community/ecosystem",
