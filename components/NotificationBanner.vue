@@ -62,11 +62,15 @@
     <p class="text-sm leading-6 text-space-gray-dark">
       <a
         :href="locale === 'ja' ? notification.ja.url : notification.en.url"
-        :target="notification.external_link ? '_blank' : '_self'"
-        class="font-semibold block"
+        :target="notification.en.url.includes('https') ? '_blank' : '_self'"
+        class="font-semibold flex items-center"
       >
         {{ locale === "ja" ? notification.ja.text : notification.en.text }}
-        <span aria-hidden="true" class="ml-1">&rarr;</span>
+        <ArrowTopRightOnSquareIcon
+          v-if="notification.en.url.includes('https')"
+          class="w-4 h-4 stroke-2 ml-1"
+        />
+        <span v-else>-></span>
       </a>
     </p>
     <div class="flex flex-1 justify-end">
@@ -84,6 +88,7 @@
 
 <script setup>
 import { XMarkIcon } from "@heroicons/vue/20/solid";
+import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 import { notification } from "@/content/notification";
 const { locale } = useI18n();
 const isVisible = ref(true);
