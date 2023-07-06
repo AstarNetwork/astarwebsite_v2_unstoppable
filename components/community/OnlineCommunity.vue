@@ -5,17 +5,13 @@
         <span>Build the Unstoppable, Together.</span>
       </h2>
       <p class="mb-36">
-        Excited for the future of Astar Network? We are too. Together, we can
-        bring Web3 to the masses and help create an innovation future for all.
-        Join the Astar community to build without limits and unlock the
-        blockchain frontier, today.
+        {{ $t("community.online_community.description") }}
       </p>
       <h3 class="text-white font-bold text-3xl sm:text-4xl mb-6 leading-tight">
-        Join our online community
+        {{ $t("community.online_community.social.title") }}
       </h3>
       <p class="mb-16">
-        Find your tribe and participate and grow our community with other Astar
-        enthusiasts.
+        {{ $t("community.online_community.social.description") }}
       </p>
     </div>
     <ul

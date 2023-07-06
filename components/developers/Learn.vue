@@ -1,7 +1,7 @@
 <template>
   <div class="px-4 sm:px-6 relative z-10">
     <h2 class="title text-center mb-12 sm:mb-24">
-      <span>Learn Basics</span>
+      <span>{{ $t("developers.learn.title") }}</span>
     </h2>
     <div
       class="max-w-7xl mx-auto lg:flex items-center lg:space-x-12 space-y-16 lg:space-y-0"
@@ -22,8 +22,7 @@
           </small>
         </h3>
         <p class="mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
-          Hands-on training to put you on the fast track to a web3 career.
-          Solidity. Rust. And Polkadot.
+          {{ $t("developers.learn.university") }}
         </p>
         <div class="text-center">
           <Button
@@ -62,29 +61,27 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+
 const docs = [
   {
-    title: "Build",
-    description:
-      "Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network.",
+    title: t("developers.learn.docs.build.title"),
+    description: t("developers.learn.docs.build.description"),
     href: "https://docs.astar.network/docs/build/",
   },
   {
-    title: "Run A Node",
-    description:
-      "Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure.",
+    title: t("developers.learn.docs.node.title"),
+    description: t("developers.learn.docs.node.description"),
     href: "https://docs.astar.network/docs/nodes/",
   },
   {
-    title: "Learn Cross-Chain Message (XCM)",
-    description:
-      "Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network.",
+    title: t("developers.learn.docs.xcm.title"),
+    description: t("developers.learn.docs.xcm.description"),
     href: "https://docs.astar.network/docs/xcm/",
   },
   {
-    title: "Integrate Toolings",
-    description:
-      "Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network.",
+    title: t("developers.learn.docs.tool.title"),
+    description: t("developers.learn.docs.tool.description"),
     href: "https://docs.astar.network/docs/integrations/",
   },
 ];

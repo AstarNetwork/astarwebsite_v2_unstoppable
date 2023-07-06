@@ -1,7 +1,7 @@
 <template>
   <section class="px-4 sm:px-6 relative z-10">
     <h2 class="max-w-4xl mx-auto title text-center mb-8 sm:mb-12">
-      <span>Build dApps on the Astar Network</span>
+      <span>{{ $t("community.builders.title") }}</span>
     </h2>
     <div
       class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 pt-6 lg:pt-24"
@@ -65,28 +65,28 @@
 <script setup lang="ts">
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 
+const { t } = useI18n();
+
 const builders = [
   {
-    title: "Ecosystem",
+    title: t("community.builders.ecosystem.title"),
     image: "builders-ecosystem.svg",
-    description:
-      "Take a look at who’s already building on Astar Network, or visit the documentation to dive in yourself.",
+    description: t("community.builders.ecosystem.description"),
     button: {
-      label: "Ecosystem",
+      label: t("community.builders.ecosystem.title"),
       href: "/community/ecosystem",
     },
     text_link: {
-      label: "Go to documentation",
+      label: t("community.builders.ecosystem.go_to_docs"),
       href: "https://docs.astar.network/",
     },
   },
   {
-    title: "Astar Space Labs",
+    title: t("community.builders.space_labs.title"),
     image: "builders-space-labs.svg",
-    description:
-      "Get started building on Astar and become a part of our vibrant ecosystem. Our community leaders will support you along your building journey.",
+    description: t("community.builders.space_labs.description"),
     button: {
-      label: "Astar Space Labs",
+      label: t("community.builders.space_labs.title"),
       href: "https://astarnetwork.notion.site/Astar-SpaceLabs-bee19d9d13ab41ba8d113347ae56448f",
     },
   },

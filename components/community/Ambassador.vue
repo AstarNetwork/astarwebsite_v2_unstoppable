@@ -13,13 +13,10 @@
         <h2
           class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-5xl font-extrabold text-center lg:text-left"
         >
-          Become an Official Ambassador
+          {{ $t("community.ambassador.title") }}
         </h2>
         <p class="text-white mx-auto mb-8 sm:text-lg">
-          We have created an open community program where every community member
-          can join and support the Astar ecosystem. You can collect points and
-          receive rewards through dApp staking with valid and useful
-          contributions.
+          {{ $t("community.ambassador.description") }}
         </p>
         <div class="text-center lg:text-left">
           <Button
@@ -28,7 +25,7 @@
             href="https://github.com/AstarNetwork/growth-program"
             target="_blank"
           >
-            Ambassador Program
+            {{ $t("community.ambassador.button") }}
             <ArrowTopRightOnSquareIcon class="w-5 h-5 stroke-2 ml-1" />
           </Button>
         </div>

@@ -9,18 +9,14 @@
       />
       <h2 class="text-black leading-tight mb-4 text-center">
         <small class="block text-xl sm:text-2xl font-bold">
-          Grants Program
+          {{ $t("community.grants.title") }}
         </small>
         <span class="block text-4xl sm:text-5xl lg:text-6xl font-extrabold">
           ink!ubator
         </span>
       </h2>
       <p class="text-black mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
-        ink!ubator, A game-changing program funded by Polkadot's Treasury Bounty
-        Program. ink!ubator fosters developer growth, ensures security audits,
-        enhances tooling, & launches high-impact products. The perfect platform
-        for innovation; pioneered by Astar - this initiative will enable &
-        empower projects looking to dive deeper into ink! and its capabilities.
+        {{ $t("community.grants.description") }}
       </p>
       <div class="text-center">
         <NuxtLink

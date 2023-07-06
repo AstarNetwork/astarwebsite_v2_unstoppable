@@ -1,7 +1,7 @@
 <template>
   <div class="px-4 sm:px-6 relative z-10">
     <h2 class="title text-center mb-12 sm:mb-32">
-      <span>Developer Support</span>
+      <span>{{ $t("developers.support.title") }}</span>
     </h2>
     <div
       class="max-w-7xl mx-auto lg:flex lg:space-x-12 space-y-16 lg:space-y-0"
@@ -19,9 +19,7 @@
           Build2Earn
         </h3>
         <p class="mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
-          #Build2Earn is our financial incentive program whose aim is to provide
-          a basic income to developers for building useful dApps on
-          Astar/Shiden.
+          {{ $t("developers.support.build2earn") }}
         </p>
         <div class="text-center">
           <Button
@@ -46,8 +44,7 @@
           ink!ubator
         </h3>
         <p class="text-black mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
-          ink!ubator connects you with core developers and extensive resources.
-          Get funding and technical support for your next ink! project.
+          {{ $t("developers.support.inkubator") }}
         </p>
         <div class="text-center">
           <NuxtLink
