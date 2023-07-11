@@ -16,8 +16,8 @@
       "inkubator": "ink!ubator connects you with core developers and extensive resources. Get funding and technical support for your next ink! project."
     },
     "learn":{
-      "title":"Learn Basics",
-      "university":"Hands-on training to put you on the fast track to a web3 career. Solidity. Rust. And Polkadot.",
+      "title":"Learn the Basics",
+      "university":"Hands-on training to put you on the fast track to a Web3 career. Solidity. Rust. And Polkadot.",
       "docs":{
         "build":{
           "title":"Build",

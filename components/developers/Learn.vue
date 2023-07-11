@@ -18,7 +18,7 @@
             Astar University
           </span>
           <small class="block text-lg sm:text-2xl">
-            Online training to gain web3 programming skills
+            Online training to gain Web3 programming skills
           </small>
         </h3>
         <p class="mx-auto max-w-2xl mb-8 sm:text-lg lg:text-center">
