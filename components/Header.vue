@@ -166,7 +166,7 @@ const menus = [
         ],
       },
       {
-        label: "Learn the Basics",
+        label: "Learn",
         nav: [
           {
             label: "Documentation",

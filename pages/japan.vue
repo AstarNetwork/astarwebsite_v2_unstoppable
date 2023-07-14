@@ -32,7 +32,7 @@
       </div>
       <JapanRegister />
       <JapanAbout class="py-24 sm:py-44" />
-      <JapanBlog class="py-12" />
+      <JapanNews class="pt-12 pb-36 lg:py-44" />
     </template>
 
     <template #earth>

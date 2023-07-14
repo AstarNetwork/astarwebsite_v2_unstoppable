@@ -9,17 +9,11 @@
       class="grid grid-cols-2 gap-x-6 sm:gap-x-8 gap-y-12 sm:gap-y-20 sm:grid-cols-4 lg:grid-cols-5"
     >
       <div v-for="item in projects" class="flex items-center justify-center">
-        <NuxtLink
-          :to="item.attributes.website"
-          target="_blank"
-          class="hover:opacity-80"
-        >
-          <img
-            :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
-            :alt="item.attributes.name"
-            class="h-12 w-32 lg:w-48 object-contain"
-          />
-        </NuxtLink>
+        <img
+          :src="useStrapiMedia(item.attributes.logo.data.attributes.url)"
+          :alt="item.attributes.name"
+          class="h-12 w-32 lg:w-48 object-contain"
+        />
       </div>
     </div>
   </div>
