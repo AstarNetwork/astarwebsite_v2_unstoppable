@@ -39,7 +39,7 @@
         <h3
           class="font-extrabold text-3xl lg:text-4xl mb-6 text-center sm:text-left"
         >
-          Documentation
+          {{ $t("developers.learn.title") }}
         </h3>
         <ul class="space-y-6">
           <li v-for="item in docs">

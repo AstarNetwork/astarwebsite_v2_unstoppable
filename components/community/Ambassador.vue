@@ -11,7 +11,7 @@
       </div>
       <div class="lg:w-3/5">
         <h2
-          class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-5xl font-extrabold text-center lg:text-left"
+          class="text-white leading-tight mb-4 text-2xl sm:text-4xl lg:text-4xl font-extrabold text-center lg:text-left"
         >
           {{ $t("community.ambassador.title") }}
         </h2>

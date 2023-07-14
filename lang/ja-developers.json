@@ -11,29 +11,30 @@
       "templates": "DAppsテンプレート"
     },
     "support": {
-      "title": "Developer Support",
-      "build2earn": "#Build2Earn is our financial incentive program whose aim is to provide a basic income to developers for building useful dApps on Astar/Shiden.",
-      "inkubator": "ink!ubator connects you with core developers and extensive resources. Get funding and technical support for your next ink! project."
+      "title": "開発者サポート",
+      "build2earn": "#Build2Earnは、Astar/Shiden Network上で価値のあるdAppsを構築する開発者に、ベーシックインカムを提供することを目的としたインセンティブプログラムです。",
+      "inkubator": "ink!ubatorは、ink!のコア開発者との繋がりや豊富なリソースを提供します。あなたの次のink!プロジェクトで、開発資金と技術サポートを受けましょう！"
     },
     "learn":{
-      "title":"Learn Basics",
-      "university":"Hands-on training to put you on the fast track to a web3 career. Solidity. Rust. And Polkadot.",
+      "title":"基礎知識を学ぶ",
+      "university":"Web3デベロッパーとしてのキャリアへ近道となる実践的なトレーニング。SoliditやRust、Polkadotについて学びます。",
       "docs":{
+        "title":"ドキュメント",
         "build":{
-          "title":"Build",
-          "description":"Find all the resources you need in order to start testing, deploying, and interacting with smart contracts on the network."
+          "title":"構築",
+          "description":"ネットワーク上でのスマート・コントラクトのテスト、デプロイ、相互通信するために必要な全てのリソースを見つけることができます。"
         },
         "node":{
-          "title":"Run A Node",
-          "description":"Explain how to run full nodes, collators, indexers, and everything you need to know related to infrastructure."
+          "title":"ノードを実行",
+          "description":"フルノード、コレーター、インデクサーなど、インフラストラクチャーに関連する全ての知識について説明します。"
         },
         "xcm":{
-          "title":"Learn Cross-Chain Message (XCM)",
-          "description":"Explain how XCM is used in Astar and how developers can use it to interact with the rest of the Polkadot network."
+          "title":"クロスチェーンメッセージ(XCM)",
+          "description":"AstarでXCMがどのように使用されているか、また開発者がどのようにXCMを使用して、その他のPolkadotネットワークと相互接続できるかについて説明します。"
         },
         "tool":{
-          "title":"Integrate Toolings",
-          "description":"Provide relevant information about the wallets, bridges, indexers, and oracles that are integrated with the network."
+          "title":"開発ツール",
+          "description":"ネットワークに統合されているウォレット、ブリッジ、インデクサー、オラクルに関する情報を提供します。"
         }
       }
     },
