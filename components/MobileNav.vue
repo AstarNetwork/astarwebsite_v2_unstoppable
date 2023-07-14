@@ -85,11 +85,7 @@
                               <NuxtLink
                                 class="flex items-center text-tiny"
                                 :to="menu.href"
-                                :target="
-                                  menu.href.includes('https')
-                                    ? '_blank'
-                                    : '_self'
-                                "
+                                target="_blank"
                               >
                                 {{ menu.label }}
                                 <ArrowTopRightOnSquareIcon
