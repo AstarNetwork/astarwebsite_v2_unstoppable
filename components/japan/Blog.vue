@@ -10,7 +10,7 @@
       <BlogArticleCard v-for="post in posts" :post="post" />
     </ul>
     <div class="text-center mt-12 sm:mt-20">
-      <Button size="lg" :href="localePath('/blog/tag/japan')">
+      <Button size="lg" :href="localePath('/blog/japan')">
         Astar Japan Blog ->
       </Button>
     </div>
@@ -25,7 +25,7 @@ const { locale } = useI18n();
 const astarSpace = locale.value === "ja" ? 11315 : 10802;
 const query = gql`
   query PostsBySpaceId {
-    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "japan" }, orderBy: id_DESC, limit: 3) {
+    posts(where: { space: { id_eq: "${astarSpace}" }, tagsOriginal_containsInsensitive: "japan", hidden_eq: false }, orderBy: id_DESC, limit: 3) {
       publishedDate: createdOnDay
       title
       href: canonical
