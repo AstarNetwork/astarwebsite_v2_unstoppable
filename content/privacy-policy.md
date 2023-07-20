@@ -1,6 +1,6 @@
 ---
 title: 'Privacy Policy'
-description: 'This is the privacy policy (“Privacy Policy”) of STAKE TECHNOLOGIES PTE. LTD., a company incorporated in Singapore, which operates the website (https://astar.network).'
+description: 'This is the privacy policy of STAKE TECHNOLOGIES PTE. LTD., a company incorporated in Singapore, which operates the website.'
 ---
 
 Updated [14 July 2023]

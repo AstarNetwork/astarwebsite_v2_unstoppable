@@ -1,6 +1,6 @@
 ---
 title: 'Term of Use'
-description: 'meta description of the page'
+description: 'Stake Technologies provides and makes available this website. All use of the Website is subject to the terms and conditions contained in this Terms of Use Agreement. Please read this Agreement carefully.'
 ---
 
 ## 1.Agreement to Terms
