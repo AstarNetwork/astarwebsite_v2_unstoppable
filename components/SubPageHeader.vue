@@ -16,7 +16,7 @@
       height="1728"
       data-not-lazy
     />
-    <div class="pt-40 pb-32 flex items-center justify-start">
+    <div class="pt-24 lg:pt-40 pb-24 lg:pb-36 flex items-center justify-start">
       <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         <slot />
       </div>
