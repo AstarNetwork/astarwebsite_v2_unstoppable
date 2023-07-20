@@ -11,8 +11,7 @@
         usage. Please let us know you agree to all of our cookies. You can find
         out more on our
         <NuxtLink
-          to="https://docs.google.com/document/d/1jEbhRfh292TahRMRdeN4z-8MYNU27dCS_vVopV6xQgk/edit?usp=sharing"
-          target="_blank"
+          :to="localePath('/privacy-policy')"
           class="text-space-blue hover:underline hover:text-space-blue-lighter transition whitespace-nowrap"
         >
           Privacy Policy
@@ -33,6 +32,8 @@
 </template>
 
 <script setup lang="ts">
+const localePath = useLocalePath();
+
 const gdpr_accept = ref(true);
 
 if (typeof window !== "undefined") {
