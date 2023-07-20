@@ -143,11 +143,11 @@ const nav = [
       },
       {
         name: t("footer.privacy_policy"),
-        href: "https://docs.google.com/document/d/1jEbhRfh292TahRMRdeN4z-8MYNU27dCS_vVopV6xQgk/edit?usp=sharing",
+        href: localePath("/privacy-policy"),
       },
       {
         name: t("footer.terms_of_use"),
-        href: "https://docs.google.com/document/d/1gxM0PEzFq7nW5VB11pMcDUaaKxfMz3BjTDtmEem_oo4/edit?usp=sharing",
+        href: localePath("/term-of-use"),
       },
       {
         name: t("footer.contact"),
