@@ -23,6 +23,7 @@ export default defineNuxtConfig({
     "@nuxtjs/apollo",
     "nuxt-simple-sitemap",
     "nuxt-schema-org",
+    "@nuxt/content",
     [
       "nuxt3-lazy-load",
       {
