@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="pointer-events-none fixed inset-x-0 bottom-0 px-6 pb-6 z-50"
-    v-if="!gdpr_accept"
-  >
+  <div class="pointer-events-none inset-x-0 mt-3" v-if="!gdpr_accept">
     <div
       class="pointer-events-auto max-w-xl rounded-xl bg-white/95 p-6 shadow-lg ring-1 ring-gray-900/5"
     >

@@ -12,8 +12,6 @@
   <NuxtLayout>
     <NuxtPage />
   </NuxtLayout>
-
-  <Gdpr />
 </template>
 
 <script setup lang="ts">
