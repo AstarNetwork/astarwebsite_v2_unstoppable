@@ -220,15 +220,6 @@ definePageMeta({
 </script>
 
 <style lang="postcss">
-.space-gradient::before {
-  @apply w-full h-full absolute content-[""] z-[0];
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
-}
-
 .entry-content {
   @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:text-tiny lg:prose-blockquote:text-base prose-blockquote:bg-white/5 prose-strong:font-medium prose-em:text-white prose-img:mx-auto;
 }
@@ -237,7 +228,9 @@ definePageMeta({
   @apply bg-white/20 font-normal rounded p-2;
 }
 .entry-content p code::before,
-.entry-content p code::after {
+.entry-content p code::after,
+.entry-content blockquote p::before,
+.entry-content blockquote p::after {
   @apply hidden;
 }
 .entry-content ul li::marker,
