@@ -219,25 +219,4 @@ definePageMeta({
 });
 </script>
 
-<style lang="postcss">
-.entry-content {
-  @apply prose prose-invert lg:prose-xl mx-auto prose-a:text-space-cyan hover:prose-a:text-space-cyan-lighter prose-headings:text-white bg-space-gray-dark prose-headings:font-bold prose-blockquote:py-3 prose-blockquote:pl-7 prose-blockquote:pr-5 prose-blockquote:text-tiny lg:prose-blockquote:text-base prose-blockquote:bg-white/5 prose-strong:font-medium prose-em:text-white prose-img:mx-auto;
-}
-.entry-content p code {
-  font-size: 0.9em;
-  @apply bg-white/20 font-normal rounded p-2;
-}
-.entry-content p code::before,
-.entry-content p code::after,
-.entry-content blockquote p::before,
-.entry-content blockquote p::after {
-  @apply hidden;
-}
-.entry-content ul li::marker,
-.entry-content ol li::marker {
-  @apply text-white;
-}
-/* .entry-content strong {
-  background: linear-gradient(transparent 60%, #69275c 60%);
-}*/
-</style>
+<style lang="postcss"></style>
