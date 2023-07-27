@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: SSH into EC2-1 instance
         uses: appleboy/ssh-action@master
@@ -18,8 +20,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/staging-ssr/astarwebsite_v2
-            git stash &&
-            git pull &&
-            npm ci &&
-            npm run build &&
+            git stash
+            git pull
+            npm ci
+            npm run build
             sudo systemctl restart ssr-stage.service
