@@ -89,7 +89,7 @@
 <script setup>
 import { XMarkIcon } from "@heroicons/vue/20/solid";
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
-import { notification } from "@/content/notification";
+import { notification } from "@/data/notification";
 const { locale } = useI18n();
 const isVisible = ref(true);
 </script>

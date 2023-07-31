@@ -64,7 +64,7 @@
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
 const route = useRoute();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const { t } = useI18n();
 const seoTitle = `${t("japan.title")} | ${meta.siteName} - ${t(
   "meta.tagline"

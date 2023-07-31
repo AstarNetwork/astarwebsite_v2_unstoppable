@@ -182,7 +182,7 @@ const posts = dataRelated.data.value.posts.map(
   }
 );
 
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `${post.title} | ${meta.siteName}`;
 const seoDescription = post.summary;
 const seoUrl = `${meta.url}${route.fullPath}`;

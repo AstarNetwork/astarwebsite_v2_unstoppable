@@ -28,7 +28,7 @@ const { data } = await useAsyncData("term-of-use", () =>
 
 const route = useRoute();
 const { t } = useI18n();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `${data.value.title} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;

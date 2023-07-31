@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 const route = useRoute();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const { t } = useI18n();
 const seoTitle = `2023 Starmap | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("starmap.description");

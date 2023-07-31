@@ -26,11 +26,11 @@
 </template>
 
 <script setup lang="ts">
-import { mentors } from "@/content/mentors";
+import { mentors } from "@/data/mentors";
 import { ref } from "vue";
 
 const route = useRoute();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const { t } = useI18n();
 const seoTitle = `${t("incubation.meta.mentors.title")} | ${t(
   "incubation.meta.title"

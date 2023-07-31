@@ -95,7 +95,7 @@
 import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const { t } = useI18n();
 const seoTitle = `${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("meta.description");

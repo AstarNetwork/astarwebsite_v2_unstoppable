@@ -84,7 +84,7 @@ const application = "https://forms.gle/4fnF1fWS3GRdDxtL6";
 
 const route = useRoute();
 const { t } = useI18n();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `Astar University | ${meta.siteName} - ${t("meta.tagline")}`;
 
 const seoDescription =

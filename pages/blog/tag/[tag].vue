@@ -92,7 +92,7 @@ const posts = data.value.posts.map(
   }
 );
 
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `${tag} | ${meta.siteName} - ${t("meta.tagline")}`;
 const seoDescription = t("blog.description");
 const seoUrl = `${meta.url}${route.fullPath}`;
