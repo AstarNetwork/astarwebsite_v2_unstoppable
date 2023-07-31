@@ -114,7 +114,7 @@ useHead({
 });
 
 const route = useRoute();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const { t } = useI18n();
 const seoTitle = `${t("contact.title")} | ${meta.siteName} - ${t(
   "meta.tagline"

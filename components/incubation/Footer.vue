@@ -20,14 +20,16 @@
       class="py-8 space-y-2 sm:space-y-0 sm:space-x-10 flex flex-col sm:flex-row justify-center"
     >
       <NuxtLink
-        to="https://docs.google.com/document/d/1gxM0PEzFq7nW5VB11pMcDUaaKxfMz3BjTDtmEem_oo4/edit?usp=sharing"
+        to="/term-of-use"
+        target="_blank"
         class="text-space-blue transition hover:underline hover:text-space-blue-lighter"
       >
         {{ $t("incubation.nav.tac") }}
         <ArrowTopRightOnSquareIcon class="w-5 h-5 inline-block align-sub" />
       </NuxtLink>
       <NuxtLink
-        to="https://docs.google.com/document/d/1XSEQ7pPtAt9qnIVLThwWytdoOqV0aNQh/edit?usp=sharing&ouid=106208569002643720949&rtpof=true&sd=true"
+        to="/privacy-policy"
+        target="_blank"
         class="text-space-blue transition hover:underline hover:text-space-blue-lighter"
       >
         {{ $t("incubation.nav.privacy") }}

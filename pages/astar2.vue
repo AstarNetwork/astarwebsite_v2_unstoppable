@@ -232,7 +232,7 @@ const logos = [
 ];
 
 const route = useRoute();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `${t("vision.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;

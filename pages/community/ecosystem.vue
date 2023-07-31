@@ -180,7 +180,7 @@ if (data.value !== null) {
 
 const route = useRoute();
 const { t } = useI18n();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `${t("ecosystem.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;

@@ -52,7 +52,7 @@ import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 
 const route = useRoute();
 const { t } = useI18n();
-import { meta } from "@/content/meta";
+import { meta } from "@/data/meta";
 const seoTitle = `${t("developers.title")} | ${meta.siteName} - ${t(
   "meta.tagline"
 )}`;
