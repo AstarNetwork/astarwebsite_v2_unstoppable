@@ -3,7 +3,7 @@ title: 'Privacy Policy'
 description: 'This is the privacy policy of STAKE TECHNOLOGIES PTE. LTD., a company incorporated in Singapore, which operates the website.'
 ---
 
-Test Updated [14 July 2023]
+Updated [14 July 2023]
 
 ## Introduction
 
