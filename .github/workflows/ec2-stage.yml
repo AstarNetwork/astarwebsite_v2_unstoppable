@@ -1,5 +1,8 @@
 name: Deploy to EC2 Staging on PR
-'on': pull_request
+on:
+  pull_request:
+    types:
+      - opened
 
 jobs:
   deploy:
@@ -18,8 +21,9 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/staging-ssr/astarwebsite_v2
-            git stash &&
-            git pull &&
-            npm ci &&
-            npm run build &&
+            git stash
+            git checkout ${{ github.event.pull_request.head.ref }}
+            git pull
+            npm ci
+            npm run build
             sudo systemctl restart ssr-stage.service
