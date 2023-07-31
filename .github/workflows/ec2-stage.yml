@@ -1,5 +1,8 @@
 name: Deploy to EC2 Staging on PR
-'on': pull_request
+on:
+  pull_request:
+    types:
+      - opened
 
 jobs:
   deploy:
@@ -8,8 +11,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
 
       - name: SSH into EC2-1 instance
         uses: appleboy/ssh-action@master
@@ -21,6 +22,7 @@ jobs:
           script: |
             cd ~/staging-ssr/astarwebsite_v2
             git stash
+            git checkout ${{ github.event.pull_request.head.ref }}
             git pull
             npm ci
             npm run build
