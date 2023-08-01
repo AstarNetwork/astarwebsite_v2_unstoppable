@@ -62,8 +62,8 @@
     "backers": "後援",
     "newsletter": {
       "global": {
-        "title": "ニュースレター",
-        "description": "ニュースレターによりAstarの最新情報をお届けします",
+        "title": "Newsletter",
+        "description": "Astarに関する最新情報をお届けします",
         "signup": "登録する"
       },
       "japan": {
