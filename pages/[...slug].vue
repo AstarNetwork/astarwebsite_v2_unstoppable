@@ -24,9 +24,10 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData("privacy-policy", () =>
-  queryContent("/privacy-policy").findOne()
-);
+const { path } = useRoute();
+const { data } = await useAsyncData(`content-${path}`, () => {
+  return queryContent().where({ _path: path }).findOne();
+});
 
 const route = useRoute();
 const { t } = useI18n();
