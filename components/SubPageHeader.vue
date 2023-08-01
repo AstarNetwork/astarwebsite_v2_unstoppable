@@ -1,5 +1,5 @@
 <template>
-  <div class="space-gradient relative before:hidden">
+  <div class="space-gradient relative">
     <img
       class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
       src="/images/common/space-cloud.webp"
@@ -17,7 +17,7 @@
       data-not-lazy
     />
     <div
-      class="pt-28 lg:pt-44 pb-16 lg:pb-32 flex items-center justify-start sub-page-header"
+      class="pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 lg:pb-32 flex items-center justify-start sub-page-header"
     >
       <div
         class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10 w-full text-center"

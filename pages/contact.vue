@@ -1,31 +1,17 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="space-gradient relative">
-        <img
-          class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
-          alt=""
-          width="1728"
-          height="1728"
-        />
-        <div
-          class="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-start"
+      <SubPageHeader>
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
         >
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-            <div class="text-center">
-              <h1
-                class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
-              >
-                {{ $t("contact.title") }}
-              </h1>
-              <p class="sm:text-xl lg:text-2xl">
-                {{ $t("contact.description") }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+          {{ $t("contact.title") }}
+        </h1>
+        <p class="sm:text-xl lg:text-2xl">
+          {{ $t("contact.description") }}
+        </p>
+      </SubPageHeader>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center relative z-10">
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-6">
           <li
@@ -180,14 +166,6 @@ const options = [
 </script>
 
 <style lang="postcss" scoped>
-.space-gradient::before {
-  @apply w-full h-full absolute content-[""] z-[0];
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
-}
 .btn {
   @apply shadow font-medium transition-all inline-block hover:cursor-pointer text-white rounded-xl px-4 py-2;
   background: linear-gradient(

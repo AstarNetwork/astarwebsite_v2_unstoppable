@@ -1,35 +1,14 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="space-gradient relative">
-        <img
-          class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-cloud.webp"
-          alt=""
-          width="1728"
-          height="1281"
-          data-not-lazy
-        />
-        <img
-          class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
-          alt=""
-          width="1728"
-          height="1728"
-          data-not-lazy
-        />
-        <div
-          class="portrait:min-h-[50vh] landscape:min-h-[60vh] flex items-center justify-start"
+      <SubPageHeader>
+        <h1
+          class="text-4xl sm:text-6xl lg:text-7xl font-extrabold drop-shadow text-center leading-none pt-12"
         >
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-            <h1
-              class="text-4xl sm:text-6xl lg:text-7xl font-extrabold drop-shadow text-center leading-none pt-12"
-            >
-              {{ $t("ecosystem.title") }}
-            </h1>
-          </div>
-        </div>
-      </div>
+          {{ $t("ecosystem.title") }}
+        </h1>
+      </SubPageHeader>
+
       <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
         <h2 class="title text-center mb-6">
           <span class="whitespace-pre-wrap">{{ $t("ecosystem.who") }}</span>
@@ -207,14 +186,3 @@ definePageMeta({
   layout: false,
 });
 </script>
-
-<style lang="postcss" scoped>
-.space-gradient::before {
-  @apply w-full h-full absolute content-[""] z-[0];
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
-}
-</style>

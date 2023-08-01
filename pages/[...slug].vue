@@ -4,7 +4,7 @@
       <ContentRenderer :value="data">
         <SubPageHeader>
           <h1
-            class="text-3xl sm:text-4xl lg:text-6xl font-bold drop-shadow leading-tight"
+            class="text-3xl sm:text-4xl lg:text-6xl font-extrabold drop-shadow leading-tight"
           >
             {{ data.title }}
           </h1>

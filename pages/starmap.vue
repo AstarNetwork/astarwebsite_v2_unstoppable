@@ -1,17 +1,17 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="space-gradient relative">
-        <img
-          class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
-          alt=""
-          width="1728"
-          height="1728"
-          data-not-lazy
-        />
-        <StarmapHero />
-      </div>
+      <SubPageHeader>
+        <h1
+          class="text-4xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight drop-shadow"
+        >
+          {{ $t("starmap.title") }}
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl">
+          {{ $t("starmap.description") }}
+        </p>
+      </SubPageHeader>
+
       <StarmapContents class="pb-28 sm:pb-44" />
     </template>
     <template #earth>
@@ -48,14 +48,3 @@ definePageMeta({
   layout: false,
 });
 </script>
-
-<style lang="postcss" scoped>
-.space-gradient::before {
-  @apply w-full h-full absolute content-[""] z-[0];
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
-}
-</style>

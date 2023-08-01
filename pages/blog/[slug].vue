@@ -1,27 +1,14 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="space-gradient relative mb-16">
+      <SubPageHeader>
         <img
-          class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
+          :src="post.image"
           alt=""
-          width="1728"
-          height="1728"
+          class="object-cover w-full lg:h-[520px] shadow-xl -my-6 lg:-my-8"
+          data-not-lazy
         />
-        <div
-          class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10 w-full pt-20 sm:pt-28 lg:pt-36"
-        >
-          <div class="text-center">
-            <img
-              :src="post.image"
-              alt=""
-              class="object-cover w-full lg:h-[520px] shadow-xl"
-              data-not-lazy
-            />
-          </div>
-        </div>
-      </div>
+      </SubPageHeader>
 
       <article class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-12">
         <header class="text-center mb-12">
@@ -218,5 +205,3 @@ definePageMeta({
   layout: false,
 });
 </script>
-
-<style lang="postcss"></style>
