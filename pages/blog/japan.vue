@@ -1,29 +1,17 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="space-gradient relative">
-        <img
-          class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
-          alt=""
-          width="1728"
-          height="1728"
-        />
-        <div
-          class="min-h-[50vh] sm:min-h-[60vh] flex items-center justify-start py-28"
+      <SubPageHeader>
+        <h1
+          class="text-3xl sm:text-4xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
         >
-          <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-            <div class="text-center">
-              <h1
-                class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight drop-shadow"
-              >
-                Astar Japan Blog
-              </h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+          Astar Japan Blog
+        </h1>
+      </SubPageHeader>
+
+      <HomeNewsletter class="py-20 sm:py-32" type="japan" />
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 my-12 sm:my-24">
         <h2
           class="text-center text-3xl sm:text-4xl font-semibold mb-8 sm:mb-12"
         >
@@ -35,8 +23,6 @@
           <BlogArticleCard v-for="post in posts" :post="post" />
         </ul>
       </div>
-
-      <HomeNewsletter class="py-20 sm:py-32" />
     </template>
     <template #earth>
       <Footer />

@@ -1,22 +1,20 @@
 <template>
-  <div class="max-w-4xl w-full mx-auto px-4 sm:px-6 relative z-10 my-12">
+  <div class="max-w-4xl w-full mx-auto px-4 sm:px-6 relative z-10">
     <div class="gradient-outlined-box">
       <div
-        class="p-8 sm:p-12 sm:flex items-center space-y-6 sm:space-y-0 sm:space-x-8"
+        class="py-8 px-4 sm:p-12 sm:flex items-center space-y-6 sm:space-y-0 sm:space-x-8"
       >
         <div class="flex-1">
           <h2
             class="font-bold text-2xl sm:text-3xl lg:text-4xl leading-tight mb-3 text-center sm:text-left"
           >
-            <span>{{ $t("home.newsletter.title") }}</span>
+            <span>{{ newsletter.title }}</span>
           </h2>
-          <p>
-            {{ $t("home.newsletter.description") }}
-          </p>
+          <p>{{ newsletter.description }}</p>
         </div>
         <div class="shrink-0 text-center">
           <Button size="lg" @click="newsletterOpen = true">
-            {{ $t("home.newsletter.signup") }}
+            {{ newsletter.button }}
           </Button>
         </div>
       </div>
@@ -55,10 +53,7 @@
             <DialogPanel
               class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark shadow-xl transition-all w-full sm:max-w-2xl"
             >
-              <iframe
-                class="w-full h-[600px]"
-                src="https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380"
-              />
+              <iframe class="w-full h-[600px]" :src="newsletter.iframe" />
               <button
                 type="button"
                 class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
@@ -75,6 +70,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import {
   Dialog,
   DialogPanel,
@@ -83,4 +79,32 @@ import {
 } from "@headlessui/vue";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
 const newsletterOpen = ref(false);
+const { t } = useI18n();
+
+const props = defineProps({
+  type: {
+    type: String,
+    default: "global",
+  },
+});
+
+const newsletters = {
+  global: {
+    iframe:
+      "https://cdn.forms-content.sg-form.com/429c438b-0fe0-11ee-8fa4-6a66fcc72380",
+    title: t("home.newsletter.global.title"),
+    description: t("home.newsletter.global.description"),
+    button: t("home.newsletter.global.signup"),
+  },
+  japan: {
+    iframe:
+      "https://cdn.forms-content.sg-form.com/14380152-3085-11ee-8b23-becd142e98bb",
+    title: t("home.newsletter.japan.title"),
+    description: t("home.newsletter.japan.description"),
+    button: t("home.newsletter.japan.signup"),
+  },
+};
+
+const newsletter =
+  props.type === "japan" ? newsletters.japan : newsletters.global;
 </script>

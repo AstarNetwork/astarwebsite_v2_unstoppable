@@ -61,9 +61,16 @@
     },
     "backers": "Backed By",
     "newsletter": {
-      "title": "Don't miss a beat.",
-      "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments.",
-      "signup": "E-mail Sign-up"
+      "global": {
+        "title": "Don't miss a beat.",
+        "description": "Sign-up for our newsletter to stay up-to-date and learn about the latest developments.",
+        "signup": "E-mail Sign-up"
+      },
+      "japan": {
+        "title": "Our Japan Newsletter",
+        "description": "The most important blockchain news from Japan to your inbox.",
+        "signup": "Subscribe"
+      }
     },
     "hiring": "We are Hiring!"
   }

@@ -61,9 +61,16 @@
     },
     "backers": "後援",
     "newsletter": {
-      "title": "ニュースレター",
-      "description": "ニュースレターによりAstarの最新情報をお届けします",
-      "signup": "登録する"
+      "global": {
+        "title": "ニュースレター",
+        "description": "ニュースレターによりAstarの最新情報をお届けします",
+        "signup": "登録する"
+      },
+      "japan": {
+        "title": "Japan Newsletter",
+        "description": "日本のブロックチェーンの最新情報をお届けします",
+        "signup": "登録する"
+      }
     },
     "hiring": "採用中です！"
   }
