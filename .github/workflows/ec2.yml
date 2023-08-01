@@ -36,7 +36,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           script: |
             cd ~/ssr/astarwebsite_v2/
-            git pull &&
-            npm ci &&
-            npm run build &&
+            git stash
+            git pull 
+            npm ci 
+            npm run build 
             sudo systemctl restart astarweb.service
