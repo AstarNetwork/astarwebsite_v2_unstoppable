@@ -6,9 +6,7 @@
     <div
       class="max-w-7xl mx-auto lg:flex items-center lg:space-x-12 space-y-16 lg:space-y-0"
     >
-      <div
-        class="space-gradient before:hidden rounded-3xl px-6 pt-1 pb-16 lg:w-1/2"
-      >
+      <div class="space-gradient rounded-3xl px-6 pt-1 pb-16 lg:w-1/2">
         <img
           src="/images/developers/university.svg"
           class="mx-auto max-w-[440px] mb-6 sm:mb-6 -mt-6 sm:-mt-16 w-full"

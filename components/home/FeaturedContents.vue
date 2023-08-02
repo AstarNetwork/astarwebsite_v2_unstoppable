@@ -3,7 +3,7 @@
     class="lg:flex max-w-7xl mx-auto px-4 sm:px-6 relative z-10 w-full lg:space-x-4 space-y-4 lg:space-y-0"
   >
     <div
-      class="space-gradient rounded-2xl before:hidden lg:w-1/2 text-center hover:brightness-110"
+      class="space-gradient rounded-2xl lg:w-1/2 text-center hover:brightness-110"
     >
       <img
         class="mx-auto -mt-24 sm:-mt-28 -mb-10 sm:-mb-16 w-full"

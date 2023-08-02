@@ -1,5 +1,5 @@
 <template>
-  <div class="space-gradient before:hidden">
+  <div class="space-gradient">
     <div
       class="text-center py-24 sm:py-36 bg-[url(/images/common/space-stars.svg)]"
     >

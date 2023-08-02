@@ -1,35 +1,20 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <div class="space-gradient relative">
-        <img
-          class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
-          src="/images/common/space-stars.svg"
-          alt=""
-          width="1728"
-          height="1728"
-        />
-        <div
-          class="flex items-center justify-start pt-32 sm:pt-48 pb-24 sm:pb-40"
-        >
-          <div class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 w-full">
-            <div class="text-center">
-              <h1>
-                <span class="sr-only">Astar 2.0 Building the Unstoppable</span>
-                <img
-                  class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
-                  src="/images/vision/title.svg"
-                  alt="Astar 2.0 Building the Unstoppable"
-                  data-not-lazy
-                />
-              </h1>
-              <h2 class="sm:text-xl lg:text-xl">
-                A Scalable Network Powering a Global Web3 Vision for All.
-              </h2>
-            </div>
-          </div>
-        </div>
-      </div>
+      <SubPageHeader>
+        <h1>
+          <span class="sr-only">Astar 2.0 Building the Unstoppable</span>
+          <img
+            class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
+            src="/images/vision/title.svg"
+            alt="Astar 2.0 Building the Unstoppable"
+            data-not-lazy
+          />
+        </h1>
+        <h2 class="sm:text-xl lg:text-xl">
+          A Scalable Network Powering a Global Web3 Vision for All.
+        </h2>
+      </SubPageHeader>
 
       <div class="relative">
         <div
@@ -260,15 +245,7 @@ definePageMeta({
 });
 </script>
 
-<style lang="postcss">
-.space-gradient::before {
-  @apply w-full h-full absolute content-[""] z-[0];
-  background: linear-gradient(
-    180deg,
-    rgba(8, 16, 41, 0) 30%,
-    rgba(8, 16, 41, 100) 100%
-  );
-}
+<style lang="postcss" scoped>
 .vision-button {
   @apply hover:cursor-pointer transition hover:brightness-150 hover:-translate-y-4;
 }
