@@ -5,7 +5,7 @@
         <img
           :src="post.image"
           alt=""
-          class="object-cover w-full lg:h-[520px] shadow-xl -my-6 lg:-my-8"
+          class="object-cover w-full aspect-blog max-w-[1280px] shadow-xl -my-6 lg:-my-8"
           data-not-lazy
         />
       </SubPageHeader>

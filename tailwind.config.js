@@ -28,6 +28,9 @@ module.exports = {
       "15xl": "14rem",
     },
     extend: {
+      aspectRatio: {
+        'blog': '191.04 / 100',
+      },
       colors: {
         'space-gray':{
           light:"#405FBA",
