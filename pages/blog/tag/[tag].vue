@@ -10,7 +10,7 @@
         </h1>
       </SubPageHeader>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 relative z-10 mb-12 sm:mb-24">
         <ul
           class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12"
           v-if="posts.length > 0"
