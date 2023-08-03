@@ -19,13 +19,4 @@ const { locale } = useI18n();
 useHead(() => ({
   htmlAttrs: { lang: locale.value },
 }));
-
-useSchemaOrg([
-  defineOrganization({
-    name: "Astar Foundation",
-    logo: "/logo.png",
-  }),
-  defineWebSite(),
-  defineWebPage(),
-]);
 </script>

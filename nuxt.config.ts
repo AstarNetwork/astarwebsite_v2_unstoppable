@@ -19,15 +19,11 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
-    "nuxt-schema-org"
   ],
   runtimeConfig: {
     public: {
       siteUrl: "https://unstoppable.astar.network",
     },
-  },
-  schemaOrg: {
-    host: "https://unstoppable.astar.network",
   },
   i18n: {
     baseUrl: "https://unstoppable.astar.network",
