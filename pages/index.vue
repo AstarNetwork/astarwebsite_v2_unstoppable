@@ -1,106 +1,226 @@
 <template>
   <NuxtLayout name="default">
     <template #space>
-      <!-- <div class="banner--hiring">
-        <NuxtLink
-          to="https://wellfound.com/company/astar-network"
-          target="_blank"
-          class="link--hiring"
+      <SubPageHeader>
+        <h1>
+          <span class="sr-only">Astar 2.0 Building the Unstoppable</span>
+          <img
+            class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
+            src="/images/vision/title.svg"
+            alt="Astar 2.0 Building the Unstoppable"
+            data-not-lazy
+          />
+        </h1>
+        <h2 class="sm:text-xl lg:text-xl">
+          A Scalable Network Powering a Global Web3 Vision for All.
+        </h2>
+      </SubPageHeader>
+
+      <div class="relative">
+        <div
+          class="max-w-4xl mx-auto px-4 sm:px-6 relative z-10 mb-24 sm:text-lg sm:leading-loose"
         >
-          {{ $t("home.hiring") }}
-          <ArrowTopRightOnSquareIcon class="w-5 h-5 ml-1 stroke-2" />
-        </NuxtLink>
-      </div> -->
-      <div class="bg-black relative">
-        <div class="absolute z-0 w-full h-screen flex items-center">
-          <ScrollParallax :speed="0.25" class="mx-auto">
-            <video
-              webkit-playsinline
-              playsinline
-              muted
-              autoplay
-              loop
-              data-not-lazy
-            >
-              <source src="/videos/astar.mp4" type="video/mp4" />
-            </video>
-          </ScrollParallax>
+          <p class="whitespace-pre-wrap">
+            {{ $t("vision.intro") }}
+          </p>
         </div>
-        <div class="space-gradient mix-blend-screen">
-          <img
-            class="absolute z-[1] mix-blend-overlay portrait:h-screen landscape:w-screen object-cover"
-            src="/images/common/space-cloud.webp"
-            alt=""
-            width="1728"
-            height="1281"
-            data-not-lazy
-          />
-          <img
-            class="fixed z-[2] portrait:h-screen landscape:w-screen object-cover"
-            src="/images/common/space-stars.svg"
-            alt=""
-            width="1728"
-            height="1728"
-            data-not-lazy
-          />
-          <HomeHero />
-          <div class="welcome-bg -mt-44 pt-44 pb-32 sm:pb-64">
-            <HomeWelcome />
+
+        <div class="relative">
+          <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center relative z-30">
+            <VisionSpaceStation
+              v-on:showDetails="clickAction"
+              class="w-full h-auto"
+            />
+          </div>
+          <div
+            class="absolute -top-20 -left-20 xl:left-0 -right-20 xl:right-0 z-10"
+          >
+            <ScrollParallax :speed="0.1">
+              <img
+                class="w-full max-w-[1600px] mx-auto"
+                src="/images/vision/supernova.webp"
+                alt=""
+                data-not-lazy
+              />
+            </ScrollParallax>
           </div>
         </div>
-      </div>
 
-      <HomeFeaturedContents />
+        <ul
+          class="flex justify-center items-center py-20 sm:py-44 divide-x divide-space-cyan"
+        >
+          <li v-for="logo in logos" class="px-2 sm:px-6">
+            <img
+              class="mx-auto w-full"
+              :src="`/images/vision/${logo.image}`"
+              :alt="logo.title"
+            />
+          </li>
+        </ul>
 
-      <HomeJoin class="pt-32 sm:pt-64 pb-32 sm:pb-64" />
+        <div class="absolute top-0 right-0 z-10">
+          <ScrollParallax :speed="0.6">
+            <img
+              class="w-full max-w-[250px] sm:max-w-[450px] lg:max-w-[600px] xl:max-w-[700px] h-auto"
+              src="/images/vision/planet.svg"
+              alt=""
+              data-not-lazy
+            />
+          </ScrollParallax>
+        </div>
 
-      <HomeRecommendedReading class="sm:py-24" />
-
-      <HomeNewsletter class="pb-12 sm:py-12" />
-    </template>
-
-    <template #earth>
-      <div class="sky-gradient">
-        <div class="sky-gradient-inner">
-          <HomeFeatures class="pt-12 pb-32 sm:pb-56" />
-          <HomeBackers />
-          <img
-            class="w-full"
-            src="/images/home/footer-sky.svg"
-            alt=""
-            width="1728"
-            height="290"
-            data-not-lazy
-          />
-          <img
-            class="w-full"
-            src="/images/home/footer-landscape.svg"
-            alt=""
-            width="1728"
-            height="220"
-            data-not-lazy
-          />
+        <div class="absolute bottom-1/4 left-12 w-full z-10 hidden lg:block">
+          <ScrollParallax :speed="0.1">
+            <img
+              class="h-auto w-full max-w-[240px] float-animation"
+              src="/images/vision/developer.svg"
+              alt=""
+              data-not-lazy
+            />
+          </ScrollParallax>
         </div>
       </div>
-      <div class="footer">
-        <div class="footer-inner pt-12 sm:pt-28">
-          <Footer color="light" />
-        </div>
-      </div>
+
+      <TransitionRoot as="template" :show="open">
+        <Dialog as="div" class="relative z-50" @close="open = false">
+          <TransitionChild
+            as="template"
+            enter="ease-out duration-300"
+            enter-from="opacity-0"
+            enter-to="opacity-100"
+            leave="ease-in duration-200"
+            leave-from="opacity-100"
+            leave-to="opacity-0"
+          >
+            <div
+              class="fixed inset-0 bg-gray-900 bg-opacity-90 transition-opacity"
+            />
+          </TransitionChild>
+
+          <div class="fixed inset-0 z-10 overflow-y-auto">
+            <div
+              class="flex min-h-full items-center justify-center p-2 sm:p-4 text-center"
+            >
+              <TransitionChild
+                as="template"
+                enter="ease-out duration-300"
+                enter-from="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+                enter-to="opacity-100 translate-y-0 sm:scale-100"
+                leave="ease-in duration-200"
+                leave-from="opacity-100 translate-y-0 sm:scale-100"
+                leave-to="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+              >
+                <DialogPanel
+                  class="relative transform overflow-hidden rounded-3xl bg-space-gray-dark px-6 py-12 text-left shadow-xl transition-all sm:w-full lg:p-16 sm:max-w-4xl"
+                >
+                  <div class="">
+                    <DialogTitle
+                      as="h3"
+                      class="text-2xl sm:text-4xl font-bold text-white leading-tight mb-4 sm:mb-6 pb-4 sm:pb-6 text-center border-b border-space-cyan"
+                    >
+                      {{ visions[visionId]["title"] }}
+                    </DialogTitle>
+                    <p class="sm:text-lg sm:leading-loose">
+                      {{ visions[visionId]["description"] }}
+                    </p>
+                  </div>
+
+                  <button
+                    type="button"
+                    class="text-gray-500 transition cursor-pointer p-3 hover:bg-space-gray hover:text-gray-400 rounded-full outline-none absolute right-0 top-0 sm:right-3 sm:top-3"
+                    @click="open = false"
+                  >
+                    <XMarkIcon class="w-8 h-8 sm:w-12 sm:h-12" />
+                  </button>
+                </DialogPanel>
+              </TransitionChild>
+            </div>
+          </div>
+        </Dialog>
+      </TransitionRoot>
     </template>
   </NuxtLayout>
 </template>
 
 <script setup lang="ts">
-import { ArrowTopRightOnSquareIcon } from "@heroicons/vue/24/outline";
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
+import { XMarkIcon } from "@heroicons/vue/24/outline";
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  TransitionChild,
+  TransitionRoot,
+} from "@headlessui/vue";
+const open = ref(false);
+const visionId = ref("staking");
 
-import { meta } from "@/data/meta";
+const clickAction = (vision: string) => {
+  visionId.value = vision;
+  open.value = true;
+};
+
 const { t } = useI18n();
-const seoTitle = `${meta.siteName} - ${t("meta.tagline")}`;
-const seoDescription = t("meta.description");
-const seoUrl = meta.url;
-const seoImage = `${meta.image}common.png`;
+
+interface Vision {
+  title: string;
+  description: string;
+}
+
+const visions: { [index: string]: Vision } = {
+  staking: {
+    title: "Staking 2.0",
+    description: t("vision.staking"),
+  },
+  startale: {
+    title: "Startale",
+    description: t("vision.startale"),
+  },
+  tokenomics: {
+    title: "Tokenomics 2.0",
+    description: t("vision.tokenomics"),
+  },
+  foundation: {
+    title: "Astar Foundation",
+    description: t("vision.foundation"),
+  },
+  governance: {
+    title: "Astar Governance",
+    description: t("vision.governance"),
+  },
+  link: {
+    title: "Astar Link",
+    description: t("vision.link"),
+  },
+  supernova: {
+    title: "Supernova",
+    description: t("vision.supernova"),
+  },
+};
+
+const logos = [
+  {
+    title: "Ethereum",
+    image: "logo-eth.svg",
+  },
+  {
+    title: "Injective",
+    image: "logo-injective.svg",
+  },
+  {
+    title: "Polkadot",
+    image: "logo-polkadot.svg",
+  },
+];
+
+const route = useRoute();
+import { meta } from "@/data/meta";
+const seoTitle = `${t("vision.title")} | ${meta.siteName} - ${t(
+  "meta.tagline"
+)}`;
+const seoDescription = t("vision.description");
+const seoUrl = `${meta.url}${route.fullPath}`;
+const seoImage = `${meta.image}vision.png`;
 
 useServerSeoMeta({
   title: () => seoTitle,
@@ -123,65 +243,32 @@ definePageMeta({
 </script>
 
 <style lang="postcss" scoped>
-.banner--hiring {
-  background: rgba(255, 255, 255, 0.85);
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 220px;
-  height: 30px;
-  color: #fff;
-  z-index: 9999;
-  text-align: right;
-  border-bottom-left-radius: 10px;
+.vision-button {
+  @apply hover:cursor-pointer transition hover:brightness-150 hover:-translate-y-4;
 }
-.link--hiring {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(
-    90deg,
-    #e6007a -5.88%,
-    #703ac2 15.42%,
-    #0070eb 40.77%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-decoration: underline;
-  font-weight: bold;
-  color: #0070eb;
+#space-station {
+  animation: 3s space-station-animation infinite;
 }
-.welcome-bg {
-  background: linear-gradient(
-    0deg,
-    rgba(8, 16, 41, 1) 50%,
-    rgba(8, 16, 41, 0) 100%
-  );
+@keyframes space-station-animation {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
 }
-.sky-gradient {
-  background: linear-gradient(
-    90deg,
-    #ffeff8 2.37%,
-    #f0e7ff 22.25%,
-    #dcedff 43.43%,
-    #def2ff 68%,
-    #d7faff 85.32%
-  );
+#supernova {
+  animation: 1.5s supernova-animation infinite;
 }
-.sky-gradient-inner {
-  background: linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-}
-.footer {
-  background: linear-gradient(260deg, #3d41f8 0.16%, #58cef4 94.67%);
-}
-.footer-inner {
-  background-image: url(/images/home/footer-reflect.svg);
-  background-position: top center;
-  background-size: 100%;
-  background-repeat: no-repeat;
+@keyframes supernova-animation {
+  0%,
+  100% {
+    @apply opacity-40;
+  }
+  30%,
+  70% {
+    @apply opacity-100;
+  }
 }
 </style>
