@@ -8,7 +8,6 @@
             class="mx-auto w-full mb-12 drop-shadow max-w-[800px]"
             src="/images/vision/title.svg"
             alt="Astar 2.0 Building the Unstoppable"
-            data-not-lazy
           />
         </h1>
         <h2 class="sm:text-xl lg:text-xl">
@@ -40,7 +39,6 @@
                 class="w-full max-w-[1600px] mx-auto"
                 src="/images/vision/supernova.webp"
                 alt=""
-                data-not-lazy
               />
             </ScrollParallax>
           </div>
@@ -64,7 +62,6 @@
               class="w-full max-w-[250px] sm:max-w-[450px] lg:max-w-[600px] xl:max-w-[700px] h-auto"
               src="/images/vision/planet.svg"
               alt=""
-              data-not-lazy
             />
           </ScrollParallax>
         </div>
@@ -75,7 +72,6 @@
               class="h-auto w-full max-w-[240px] float-animation"
               src="/images/vision/developer.svg"
               alt=""
-              data-not-lazy
             />
           </ScrollParallax>
         </div>

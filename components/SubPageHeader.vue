@@ -6,7 +6,6 @@
       alt=""
       width="1728"
       height="1281"
-      data-not-lazy
     />
     <img
       class="fixed z-[3] portrait:h-screen landscape:w-screen object-cover"
@@ -14,7 +13,6 @@
       alt=""
       width="1728"
       height="1728"
-      data-not-lazy
     />
     <div
       class="pt-28 sm:pt-36 lg:pt-44 pb-16 sm:pb-24 lg:pb-32 flex items-center justify-start sub-page-header"

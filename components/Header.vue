@@ -9,7 +9,6 @@
           alt="Astar Network"
           width="188"
           height="60"
-          data-not-lazy
         />
       </NuxtLink>
     </div>
