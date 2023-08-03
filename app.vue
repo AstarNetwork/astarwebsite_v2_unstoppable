@@ -18,5 +18,11 @@
 const { locale } = useI18n();
 useHead(() => ({
   htmlAttrs: { lang: locale.value },
+  link: [
+    {
+      rel: "canonical",
+      href: "https://astar.network/astar2",
+    },
+  ],
 }));
 </script>

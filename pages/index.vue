@@ -139,6 +139,7 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from "vue";
 import ScrollParallax from "vue3-parallax/src/components/ScrollParallax.vue";
 import { XMarkIcon } from "@heroicons/vue/24/outline";
 import {
