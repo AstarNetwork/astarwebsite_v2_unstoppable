@@ -1,5 +1,6 @@
 <template>
   <div class="overflow-hidden">
+    <Header />
     <slot name="space" />
   </div>
 
