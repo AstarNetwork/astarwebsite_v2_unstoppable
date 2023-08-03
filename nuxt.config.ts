@@ -19,14 +19,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
-    "nuxt-simple-sitemap",
-    "nuxt-schema-org",
-    [
-      "nuxt3-lazy-load",
-      {
-        defaultImage: "/images/placeholder.png",
-      },
-    ],
+    "nuxt-schema-org"
   ],
   runtimeConfig: {
     public: {
@@ -55,9 +48,5 @@ export default defineNuxtConfig({
     langDir: "lang",
     defaultLocale: "en",
     strategy: "prefix_except_default",
-  },
-  sitemap: {
-    siteUrl: "https://unstoppable.astar.network",
-    discoverImages: false,
   },
 });
