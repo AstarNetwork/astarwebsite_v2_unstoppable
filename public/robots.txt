@@ -1,3 +1,2 @@
 User-agent: *
-Disallow:
-Sitemap: https://unstoppable.astar.network/sitemap.xml
+Disallow: /
