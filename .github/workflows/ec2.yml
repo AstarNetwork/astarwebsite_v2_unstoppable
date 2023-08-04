@@ -1,4 +1,4 @@
-name: [Unstoppable] Deploy on EC2
+name: DeployUnstoppable on EC2
 
 on:
   push:
