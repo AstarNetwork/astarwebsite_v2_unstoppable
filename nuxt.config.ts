@@ -34,12 +34,6 @@ export default defineNuxtConfig({
         iso: "en-US",
         files: ["en.json", "en-vision.json"],
       },
-      {
-        code: "ja",
-        name: "日本語",
-        iso: "ja-JP",
-        files: ["ja.json", "ja-vision.json"],
-      },
     ],
     langDir: "lang",
     defaultLocale: "en",
