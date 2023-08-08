@@ -11,7 +11,7 @@
           />
         </h1>
         <h2 class="sm:text-xl lg:text-xl">
-          A Scalable Network Powering a Global Web3 Vision for All.
+          PR test. A Scalable Network Powering a Global Web3 Vision for All.
         </h2>
       </SubPageHeader>
 
