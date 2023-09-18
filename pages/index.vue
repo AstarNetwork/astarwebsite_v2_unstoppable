@@ -201,8 +201,8 @@ const logos = [
     image: "logo-eth.svg",
   },
   {
-    title: "Injective",
-    image: "logo-injective.svg",
+    title: "Polygon",
+    image: "logo-polygon.svg",
   },
   {
     title: "Polkadot",
