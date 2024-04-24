@@ -9,7 +9,7 @@ COPY package*.json ./
 
 # Install dependencies
 # npm ci is used here for a clean, reproducible install based on package-lock.json
-RUN npm ci
+RUN npm install
 
 # Copy the rest of your application's code
 COPY . .
